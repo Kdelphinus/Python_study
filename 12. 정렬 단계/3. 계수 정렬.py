@@ -52,14 +52,14 @@ import sys
 
 n = int(sys.stdin.readline())
 li = [0] * 10001  # 문제에서 최댓값이 10000
-for i in range(n):
+for i in range(n):  # 숫자의 개수를 각 인덱스에 저장한다
     temp = int(sys.stdin.readline())
     li[temp] += 1
 
 # check = [] # 정렬된 숫자를 저장할 리스트
 
 for j in range(1, 10001):
-    if li[j] >= 1:
+    if li[j] >= 1:  # 숫자가 있다면 개수만큼 출력한다
         for k in range(li[j]):
             print(j)
             # check.append(j)
