@@ -9,18 +9,13 @@
 # def counting_sorted(my_list, num):
 #     """입력받는 값은 정렬 안 된 리스트와 리스트 안에 들어간 수의 최대인 num"""
 
-#     # 리스트 안에 들어갈 수 있는 최대 정수까지 넣을 수 있는 리스트 생성
-#     count = [0] * num
+#     count = [0] * num  # 리스트 안에 들어갈 수 있는 최대 정수까지 넣을 수 있는 리스트 생성
+#     count_sort = [0] * len(my_list)  # 정렬된 수들이 들어갈 리스트
 
-#     # 정렬된 수들이 들어갈 리스트
-#     count_sort = [0] * len(my_list)
-
-#     # 주어진 리스트 안, 수의 개수를 리스트 배열 인덱스에 맞춰 저장
-#     for i in my_list:
+#     for i in my_list:  # 주어진 리스트 안, 수의 개수를 리스트 배열 인덱스에 맞춰 저장
 #         count[i] += 1
 
-#     # 배열 인덱스의 수가 자신보다 앞에 있는 수의 개수를 가짐
-#     for i in range(1, num):
+#     for i in range(1, num):  # 배열 인덱스의 수가 자신보다 앞에 있는 수의 개수를 가짐
 #         count[i] += count[i - 1]
 
 #     # 주어진 리스트의 가장 뒤에 있는 숫자를 가져옴
@@ -33,11 +28,8 @@
 #     return count_sort
 
 
-# # 주어질 숫자의 개수
-# num = int(input())
-
-# # 받은 숫자를 저장할 리스트
-# num_list = []
+# num = int(input())  # 주어질 숫자의 개수
+# num_list = []  # 받은 숫자를 저장할 리스트
 
 # # 주어진 수 받아서 리스트에 저장
 # for _ in range(num):
@@ -64,7 +56,10 @@ for i in range(n):
     temp = int(sys.stdin.readline())
     li[temp] += 1
 
+# check = [] # 정렬된 숫자를 저장할 리스트
+
 for j in range(1, 10001):
     if li[j] >= 1:
         for k in range(li[j]):
             print(j)
+            # check.append(j)
