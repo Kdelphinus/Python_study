@@ -6,6 +6,7 @@ minus_one, zero, one = 0, 0, 0  # -1 종이의 수, 0 종이의 수, 1 종이의
 
 
 def oneColor(n, y, x):
+    """종이가 같은 숫자인지 확인하고 아니면 9장으로 나누는 함수"""
     global minus_one, zero, one
 
     if n == 1:  # 종이의 크기가 1칸일 때
