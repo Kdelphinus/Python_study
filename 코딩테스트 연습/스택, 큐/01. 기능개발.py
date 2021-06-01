@@ -27,3 +27,8 @@ def solution(progresses, speeds):
             break
 
     return answer
+
+
+progresses = [95, 90, 99, 99, 80, 99]  # 작업 현황
+speeds = [1, 1, 1, 1, 1, 1]  # 작업 속도
+print(solution(progresses, speeds))
