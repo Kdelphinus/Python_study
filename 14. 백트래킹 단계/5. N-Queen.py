@@ -21,11 +21,11 @@ def N_queen(i):
         cnt += 1
         return
 
-    for j in range(N):  # 세로, 오른쪽 대각선, 왼쪽 대각선에 퀸이 없을 경우 두고 다음 행으로 이동
-        if not (height[j] or right_diagonal[i + j] or left_diagonal[i - j + N - 1]):
-            height[j] = right_diagonal[i + j] = left_diagonal[i - j + N - 1] = True
+    for j in range(N):  # 세로, 왼쪽 대각선, 오른쪽 대각선에 퀸이 없을 경우 두고 다음 행으로 이동
+        if not (height[j] or left_diagonal[i + j] or right_diagonal[i - j + N - 1]):
+            height[j] = left_diagonal[i + j] = right_diagonal[i - j + N - 1] = True
             N_queen(i + 1)
-            height[j] = right_diagonal[i + j] = left_diagonal[i - j + N - 1] = False
+            height[j] = left_diagonal[i + j] = right_diagonal[i - j + N - 1] = False
 
 
 N_queen(0)
