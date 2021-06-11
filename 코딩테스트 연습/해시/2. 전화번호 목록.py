@@ -18,6 +18,3 @@ a.sort()
 print(a)
 
 print(solution(a))
-
-
-"""모범 답안"""
