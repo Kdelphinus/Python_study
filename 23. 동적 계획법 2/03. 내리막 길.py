@@ -13,7 +13,17 @@ dxy = [(1, 0), (-1, 0), (0, 1), (0, -1)]  # 오른쪽, 왼쪽, 위, 아래
 
 
 def find_downhill(x, y, trip_map, dp):
-    """도착지점에서 출발지점으로 가는 길을 찾는 방식으로 작동하는 함수"""
+    """find_downhill [summary]
+
+    Args:
+        x (int): 가로축 좌표
+        y (int): 세로축 좌표
+        trip_map (2d-list): 계단에 높이가 저장된 지도
+        dp (2d-list): 현 위치 타일을 지나가는 길의 개수
+
+    Returns:
+        dp[y][x] (int): 출발점에서 도착점까지 내리막으로만 갈 수 있는 경우의 수
+    """
     if dp[y][x] != -1:  # 이미 지나갔던 길이면 그 길에서 도착지점까지 갈 수 있는 수를 리턴
         return dp[y][x]
 
