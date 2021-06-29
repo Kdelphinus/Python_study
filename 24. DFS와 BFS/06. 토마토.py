@@ -6,6 +6,16 @@ input = sys.stdin.readline
 
 
 def BFS(m, n, box):
+    """BFS
+
+    Args:
+        m (int): 가로 길이
+        n (int): 세로 길이
+        box (2d list): 토마토가 들어있는 박스
+
+    Returns:
+        days(int): 모든 토마토가 익는데 걸리는 날짜
+    """
     # 아래, 위, 오른쪽, 왼쪽
     dx = [0, 0, 1, -1]
     dy = [1, -1, 0, 0]
