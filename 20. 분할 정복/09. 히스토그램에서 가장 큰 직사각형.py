@@ -11,7 +11,7 @@ while True:
     stack = []  # 히스토그램의 인덱스를 담을 스택
     max_area = 0  # 최대 넓이
     for index, height in enumerate(hist):
-        # 스택에 값이 있고 스택에 저장된 마지막 히스토그램의 높이가 현재 히스토그램 높이보다 높을 때
+        # 스택에 값이 없거나 현재 높이가 직전 높이보다 같거나 클 때까지 반복
         while stack and hist[stack[-1]] > height:
             ih = hist[stack.pop()]  # 마지막 stack의 높이
 
