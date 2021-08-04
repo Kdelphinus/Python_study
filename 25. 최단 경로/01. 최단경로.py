@@ -11,7 +11,7 @@ def dijkstra(start_node):
     heapq.heappush(heap, (0, start_node))  # 초기값 설정
 
     while heap:  # heap이 빌 때까지 반복
-        weight, now = heapq.heappop(heap)  # 무게와 현재 위치를 꺼낸다
+        weight, now = heapq.heappop(heap)  # 가중치와 현재 위치를 꺼낸다
 
         if dp[now] < weight:  # 현재 가중치보다 더 크다면 바로 종료
             continue
