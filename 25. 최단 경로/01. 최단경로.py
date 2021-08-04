@@ -2,7 +2,7 @@
 import sys
 import heapq
 
-INF = sys.maxsize  # 무한대
+INF = float("inf")  # 무한대
 input = sys.stdin.readline
 
 

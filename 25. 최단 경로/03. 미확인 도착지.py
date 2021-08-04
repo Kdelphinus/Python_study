@@ -4,7 +4,7 @@ import sys
 import heapq as hp
 
 input = sys.stdin.readline
-INF = sys.maxsize
+INF = float("inf")
 
 
 def dijkstra(start, road_num, roads):
@@ -25,6 +25,10 @@ def dijkstra(start, road_num, roads):
 
     while heap:
         now, weight = hp.heappop(heap)
+
+        if weight > dp[now]:  # 현재 저장한 것과 비교하여 now에 갈 수 있는 가중치보다 더 큰 가중치면 무시
+            continue
+
         for next, next_weight in roads[now]:
             next_weight += weight
             if dp[next] > next_weight:
@@ -72,7 +76,10 @@ def find_destination(crossroad_num, road_num, goal_num, start, waypoint1, waypoi
             + waypoint2_dp[waypoint1]
             + waypoint1_dp[goal],  # start -> waypoint2 -> wqypoint1 -> goal
         )
-        if cnt == start_dp[goal]:  # 교차로를 거쳐 목적지에 도착한 거리와 출발지점에서 목적지까지 최단 거리가 같다면
+        # 경로가 연결되지 않은 후보지는 INF로 남아있기에 INF도 제외해야 함
+        if (
+            cnt == start_dp[goal] and cnt < INF
+        ):  # 교차로를 거쳐 목적지에 도착한 거리와 출발지점에서 목적지까지 최단 거리가 같다면
             target_goals.append(goal)
 
     return target_goals

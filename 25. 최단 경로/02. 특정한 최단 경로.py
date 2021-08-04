@@ -3,7 +3,7 @@ import sys
 import heapq as hp
 
 input = sys.stdin.readline
-INF = sys.maxsize
+INF = float("inf")
 
 
 def dijkstra(start):
@@ -15,6 +15,10 @@ def dijkstra(start):
 
     while heap:
         now, weight = hp.heappop(heap)
+
+        if weight > dp[now]:  # 현재 저장한 것과 비교하여 now에 갈 수 있는 가중치보다 더 큰 가중치면 무시
+            continue
+        
         for next, next_weight in graph[now]:
             next_weight += weight
             if dp[next] > next_weight:
