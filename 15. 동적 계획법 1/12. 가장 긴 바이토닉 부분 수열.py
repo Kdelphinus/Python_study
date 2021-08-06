@@ -27,3 +27,29 @@ for i in range(n):
     dp[i] = increase[i] + decrease[i] - 1
 
 print(max(dp))
+
+# ----------------------------------------------------------------------------------------
+"""2021.08.06, c++을 풀어보고 풀어보는 풀이"""
+# 걸리는 시간은 비슷하다, 허나 더 간단하고 보기 편하다
+import sys
+
+input = sys.stdin.readline
+
+
+def lbs(num, arr):
+    incre = [1] * num
+    decre = [1] * num
+
+    for i in range(1, num):
+        for j in range(i):
+            if arr[i] > arr[j]:
+                incre[i] = max(incre[i], incre[j] + 1)
+            elif arr[i] < arr[j]:
+                decre[i] = max(decre[i], decre[j] + 1, incre[j] + 1)
+
+    return max(max(incre), max(decre))
+
+
+num = int(input())
+arr = list(map(int, input().split()))
+print(lbs(num, arr))
