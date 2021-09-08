@@ -17,16 +17,26 @@ def solution(m, musicinfos):
         temp = musicinfo.split(",")
         playing_time = time_minus(temp[0], temp[1])
         song_len = len(temp[3]) - temp[3].count("#")
+        codes = []
+        idx = 0
+        while idx < len(temp[3]):
+            if idx < len(temp[3]) - 1 and temp[3][idx + 1] == "#":
+                codes.append(temp[3][idx : idx + 2])
+                idx += 2
+            else:
+                codes.append(temp[3][idx])
+                idx += 1
 
         if playing_time % (song_len) == 0:
             code = temp[3] * (playing_time // song_len)
         elif len(temp[3]) < playing_time:
             code = temp[3] * (playing_time // song_len)
-            i = temp[3][: playing_time % song_len].count("#")
-            code += temp[3][: playing_time % song_len + i]
+            for i in range(playing_time % song_len):
+                code += codes[i]
         else:
-            i = temp[3][: playing_time % song_len].count("#")
-            code = temp[3][: playing_time % song_len + i]
+            code = ""
+            for i in range(playing_time % song_len):
+                code += codes[i]
 
         music_infos.append([playing_time, temp[2], code])
 
