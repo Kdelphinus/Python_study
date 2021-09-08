@@ -16,22 +16,23 @@ def solution(m, musicinfos):
     for musicinfo in musicinfos:
         temp = musicinfo.split(",")
         playing_time = time_minus(temp[0], temp[1])
+        song_len = len(temp[3]) - temp[3].count("#")
 
-        if playing_time % len(temp[3]) == 0:
-            code = temp[3] * (playing_time // len(temp[3]))
+        if playing_time % (song_len) == 0:
+            code = temp[3] * (playing_time // song_len)
         elif len(temp[3]) < playing_time:
-            code = (
-                temp[3] * (playing_time // len(temp[3]))
-                + temp[3][: playing_time % len(temp[3])]
-            )
+            code = temp[3] * (playing_time // song_len)
+            i = temp[3][: playing_time % song_len].count("#")
+            code += temp[3][: playing_time % song_len + i]
         else:
-            code = temp[3][: playing_time % len(temp[3])]
+            i = temp[3][: playing_time % song_len].count("#")
+            code = temp[3][: playing_time % song_len + i]
 
         music_infos.append([playing_time, temp[2], code])
-    music_infos.sort(key=lambda x: (-x[0]))
 
+    music_infos.sort(key=lambda x: (-x[0]))
     for music_info in music_infos:
-        if m in music_info[2]:
+        if music_info[2].count(m) > music_info[2].count(m + "#"):
             return music_info[1]
 
     return "(None)"
