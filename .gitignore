@@ -160,10 +160,11 @@ cython_debug/
 .history
 .ionide
 
-### 개인 폴더
+### 내가 추가한 것
 nado_coding/
 wikidocs_Quiz/
 data/
 codeit/
+practice.py
 
 # End of https://www.toptal.com/developers/gitignore/api/python,visualstudiocode
