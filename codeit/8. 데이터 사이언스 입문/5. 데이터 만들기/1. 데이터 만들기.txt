@@ -1,0 +1,46 @@
+1. 데이터 다운로드 받기
+- 데이터에 저작관이 있는 경우도 있으니 실제로 활용할 땐 잘 확인할 것
+- 국내
+    서울열린데이터광장  
+    https://data.seoul.go.kr/
+
+    공공데이터포털  
+    https://www.data.go.kr
+
+    e-나라지표  
+    http://www.index.go.kr/
+
+    국가통계포털  
+    http://kosis.kr
+
+    서울특별시 빅데이터 캠퍼스  
+    https://bigdata.seoul.go.kr/
+
+    통계청  
+    http://kostat.go.kr/
+
+- 해외
+    구글 데이터 검색  
+    https://toolbox.google.com/datasetsearch
+
+    캐글  
+    https://www.kaggle.com/datasets
+
+    Awesome Public Datasets Github  
+    https://github.com/awesomedata/awesome-public-datasets
+
+    Data and Story Library  
+    https://dasl.datadescription.com/
+
+    데이터허브  
+    https://datahub.io/
+
+2. 센서 사용하기
+- 아두이노, 라즈베리 파이 등을 이용하면 개인 개발자도 센서를 활용한 데이터 분석이 가능
+
+3. 웹에서 모으기
+    3.1 웹 스크레이핑
+    - 하나의 특정 웹페이지에서 정보를 받아오는 것
+    
+    3.2 웹 크롤링
+    - 자동으로 여러 웹페이지를 돌아다니는 것

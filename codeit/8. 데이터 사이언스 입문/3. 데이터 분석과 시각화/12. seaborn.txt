@@ -1,0 +1,13 @@
+1. Seaborn
+- Statistical Data Visualization: 통계를 기반으로 한 데이터 시각화
+
+2. PDF
+- Probability Density Function: 확률 밀도 함수
+- 히스토그램 막대를 무한으로 늘리면 비슷한 모양
+- 확률 밀도 넓이는 1
+- 특정 구간의 넓이를 구하면 특정 구간의 넓이를 구하면 된다
+
+3. KDE
+- Kernel Density Estimation
+- 모든 데이터를 모을 수는 없기에 이상적인 모양은 나오지 않는다
+- 그렇기에 이를 추측하여 이상적 모양으로 만드는 것이 KDE
