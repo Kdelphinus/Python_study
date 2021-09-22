@@ -1,4 +1,3 @@
-from typing import SupportsComplex
 import requests
 
 TOKEN = "1d5f1764874aec88f4204feb38bd9206"
@@ -239,7 +238,7 @@ def route_setting(auth_key):  # score = 246.44743347338937, failed_requests_coun
     return score(auth_key)
 
 
-def route_another(auth_key):  # 여러 조건으로 실행한 것들이 있음
+def route_another(auth_key):  # score = 250.31111694677872, failed_requests_count = 200
     """
     * 4번차가 12번을 기준으로 밑으로 한 바퀴 도는 루트
     score = 250.31111694677872, failed_requests_count = 200
