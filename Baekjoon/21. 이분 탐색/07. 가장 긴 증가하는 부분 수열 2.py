@@ -32,5 +32,6 @@ for i in range(1, num):
     else:  # 직전 숫자보다 작거나 같다면 자신보다 큰 수 중 최솟값과 값을 바꾼다
         LIS[binary_search(number[i])] = number[i]
 
-# print(LIS)  # 이 방식은 O(nlogn)으로 동적 계획법에 비해 빠르지만 LIS의 답을 구할 수는 없다
+# 이 방식은 O(nlogn)으로 동적 계획법에 비해 빠르지만 LIS의 답을 구할 수는 없다
+# 그러나 27-3번 문제는 조금의 구현을 속도는 빠르게 유지하고 답을 구함
 print(len(LIS))
