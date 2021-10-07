@@ -33,5 +33,5 @@ for i in range(1, num):
         LIS[binary_search(number[i])] = number[i]
 
 # 이 방식은 O(nlogn)으로 동적 계획법에 비해 빠르지만 LIS의 답을 구할 수는 없다
-# 그러나 27-3번 문제는 조금의 구현을 속도는 빠르게 유지하고 답을 구함
+# 그러나 27-3번 문제는 속도를 빠르게 유지하고 답을 구할 수 있도록 구현
 print(len(LIS))
