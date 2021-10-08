@@ -1,4 +1,4 @@
-import heapq
+import heapq  # 파이썬은 기본적으로 최소힙을 사용
 
 heap = []  # 최소 힙 생성
 
