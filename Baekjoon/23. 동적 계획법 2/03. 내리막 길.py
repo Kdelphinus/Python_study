@@ -13,7 +13,7 @@ dxy = [(1, 0), (-1, 0), (0, 1), (0, -1)]  # 오른쪽, 왼쪽, 위, 아래
 
 
 def find_downhill(x, y, trip_map, dp):
-    """find_downhill [summary]
+    """find_downhill 출발점에서 도착점까지 재귀로 내려간 뒤, 출발지점으로 거슬러 올라오며 경우의 수를 확인하는 함수
 
     Args:
         x (int): 가로축 좌표
