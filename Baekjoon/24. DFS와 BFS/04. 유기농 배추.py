@@ -1,7 +1,7 @@
 """1012 유기농 배추"""
 import sys
 
-sys.setrecursionlimit(10 ** 8) # 재귀 제한을 늘림
+sys.setrecursionlimit(10 ** 8)  # 재귀 제한을 늘림
 input = sys.stdin.readline
 
 
@@ -43,3 +43,43 @@ for t in range(test):
                 anw += 1  # 배추가 연결된 곳에 지렁이 한 마리를 추가한다
 
     print(anw)
+
+# -------------------------------------------------------------------------------------------------------------------
+from collections import deque
+
+
+def BFS(x, y):
+    field[y][x] = 0
+    queue = deque()
+    queue.append([x, y])
+    dxy = [[1, 0], [-1, 0], [0, 1], [0, -1]]
+
+    while queue:
+        x, y = queue.popleft()
+        for dx, dy in dxy:
+            nx = x + dx
+            ny = y + dy
+
+            if 0 <= nx < width and 0 <= ny < height and field[ny][nx] == 1:
+                queue.append([nx, ny])
+                field[ny][nx] = 0
+
+
+test = int(input())
+
+for t in range(test):
+    width, height, num = map(int, input().split())
+    field = [[0] * width for _ in range(height)]
+    earthworms = 0
+
+    for _ in range(num):
+        tmp_x, tmp_y = map(int, input().split())
+        field[tmp_y][tmp_x] = 1
+
+    for h in range(height):
+        for w in range(width):
+            if field[h][w]:
+                BFS(w, h)
+                earthworms += 1
+
+    print(earthworms)
