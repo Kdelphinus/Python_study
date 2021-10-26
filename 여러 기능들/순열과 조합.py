@@ -10,6 +10,9 @@ items = ["A", "B", "C", "D"]
 # # 모든 원소를 사용하여 순열을 만든다
 # print("순열(map과 join으로 붙이지 않으면): ", list(permutations(items)))
 
+# 전체 원소를 사용하여 순열을 만든다
+print("전체 순열: ", list(permutations(items)))
+
 # 2개의 원소를 사용하여 순열을 만든다
 print("순열: ", list(map("".join, permutations(items, 2))))
 
