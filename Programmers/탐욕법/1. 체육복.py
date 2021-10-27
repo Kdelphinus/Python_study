@@ -14,6 +14,10 @@ def solution(n, lost, reserve):
     cloth = [1] * (n + 1)  # 모두 1벌씩 가지고 있다
     cloth[0] = 0  # 0번째 인덱스는 안 쓸 것이기에 제외
 
+    # 두 리스트 정렬, 앞 사람에게서 빌려야 뒷 사람이 빌릴 수가 늘어난다
+    lost.sort()
+    reserve.sort()
+
     for i in reserve:  # 여분의 체육복을 가진 사람은 체육복 한 벌 추가
         cloth[i] += 1
 
