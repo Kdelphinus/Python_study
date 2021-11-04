@@ -43,6 +43,7 @@ for i in parent_node[2:]:
 # ---------------------------------------------------------------------------------------
 
 """dfs를 사용한 풀이"""
+# 링크: https://claude-u.tistory.com/192
 node = int(input())
 node_graph = [[] for _ in range(node + 1)]
 parent = [[] for _ in range(node + 1)]
