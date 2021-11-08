@@ -28,9 +28,9 @@ def inorder(root):
         root (str): root 노드
     """
     if root != ".":
-        preorder(tree[root][0])  # left
+        inorder(tree[root][0])  # left
         print(root, end="")  # parent
-        preorder(tree[root][1])  # right
+        inorder(tree[root][1])  # right
 
 
 def postorder(root):
@@ -42,8 +42,8 @@ def postorder(root):
         root (str): root 노드
     """
     if root != ".":
-        preorder(tree[root][0])  # left
-        preorder(tree[root][1])  # right
+        postorder(tree[root][0])  # left
+        postorder(tree[root][1])  # right
         print(root, end="")  # parent
 
 
