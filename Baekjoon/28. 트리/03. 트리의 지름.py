@@ -1,5 +1,4 @@
-"""1167 트리의 지름"""
-# 처음에 floyd로 했으나 메모리 초과로 실패
+"""1967 트리의 지름"""
 import sys
 from collections import deque
 
@@ -36,14 +35,14 @@ def bfs(start):
 
 vertex_num = int(input())
 tree = [[] for _ in range(vertex_num + 1)]
-for _ in range(vertex_num):
-    v_list = list(map(int, input().split()))
-    vertex = v_list[0]
-    for i in range(1, len(v_list) - 1, 2):
-        tree[vertex].append([v_list[i], v_list[i + 1]])
+for _ in range(vertex_num - 1):
+    start, end, weight = map(int, input().split())
+
+    # 가중치가 있기에 양방향으로 탐색
+    tree[start].append([end, weight])
+    tree[end].append([start, weight])
 
 
-# 이곳의 그림 참고 / 링크: https://www.acmicpc.net/problem/1967, 문제는 28-3문제
 # 아무 정점에서 가장 먼 정점은 지름의 한 점이다
 radius = bfs(1)
 
