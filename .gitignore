@@ -161,16 +161,11 @@ cython_debug/
 .ionide
 
 ### 내가 추가한 것
-nado_coding/
-wikidocs_Quiz/
-data/
-codeit/
+study/
 practice.py
 2022 KAKAO 2차 고명준/
-CS_basic/
-Django/
 goorm/AI기술 자연어 처리 전문가 양성 과정 2기/
 goorm/Do it! 딥러닝 입문/
-PyTorch/
+Python_Library_Study/
 
 # End of https://www.toptal.com/developers/gitignore/api/python,visualstudiocode
