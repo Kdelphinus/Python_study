@@ -54,7 +54,7 @@ trap_x, trap_y = map(int, input().split())
 # factorial 부분에서 runtimeerror 발생
 fact = [1 for _ in range(width + height + 1)]
 for i in range(2, width + height + 1):
-    fact[i] = str(int(fact[i - 1]) * i % P)
+    fact[i] = fact[i - 1] * i % P
 
 if target_x >= trap_x and target_y >= trap_y:  # 도토리 주우러 가는 길에 함정이 있을 때
     # 출발위치에서 도토리까지 가는 최단 경로의 수
