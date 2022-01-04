@@ -169,7 +169,7 @@ goorm/AI기술 자연어 처리 전문가 양성 과정/_util/
 goorm/AI기술 자연어 처리 전문가 양성 과정/models/
 goorm/Do it! 딥러닝 입문/
 Python_Library_Study/
-test.ipynb
+memo.txt
 *.whl
 
 # End of https://www.toptal.com/developers/gitignore/api/python,visualstudiocode
