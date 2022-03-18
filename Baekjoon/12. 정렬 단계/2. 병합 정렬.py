@@ -54,3 +54,48 @@ num_sort = merged_sort(num)
 # 정렬된 리스트를 출력
 for i in range(n):
     print(num_sort[i])
+
+
+###############################################################################################
+"""2022.03.18 풀이, PyPy3"""
+
+
+def merge(left_list, right_list):
+    i, j = 0, 0
+    merge_list = []
+
+    while i < len(left_list) and j < len(right_list):
+        if left_list[i] < right_list[j]:
+            merge_list.append(left_list[i])
+            i += 1
+        else:
+            merge_list.append(right_list[j])
+            j += 1
+
+    if j == len(right_list):
+        merge_list += left_list[i:]
+    if i == len(left_list):
+        merge_list += right_list[j:]
+
+    return merge_list
+
+
+def merge_sort(numbers):
+    if len(numbers) <= 1:
+        return numbers
+
+    mid = len(numbers) // 2
+    left_list = numbers[:mid]
+    right_list = numbers[mid:]
+    return merge(merge_sort(left_list), merge_sort(right_list))
+
+
+n = int(input())
+numbers = []
+for _ in range(n):
+    numbers.append(int(input()))
+
+number_sort = merge_sort(numbers)
+
+for num in number_sort:
+    print(num)
