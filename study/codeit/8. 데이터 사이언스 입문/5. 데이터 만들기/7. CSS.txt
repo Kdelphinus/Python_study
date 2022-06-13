@@ -1,0 +1,126 @@
+1. 웹 페이지 스타일링 원리
+- HTML과 스타일링 원리는 특정 태그를 선택한다는 공통점이 있다
+- 예시
+    li {
+        color: blue;
+        font-size: 20px;
+    }
+
+    1.1 CSS로 HTML 꾸미기
+    - CSS코드는 'HTML 태그를 선택하는 코드'와 '스타일을 지정하는 코드'로 이루어짐
+    - HTML 태그를 선택하는 코드
+        li{
+        }
+        - 모든 <li> 태그를 대상으로 스타일을 적용하라는 의미
+        - CSS 선택자(CSS Selector): 스타일 적용의 범위를 정하는 코드
+    - 스타일을 지정하는 코드
+        color: blue;
+        font-size: 20px;
+        - color: blue;은 색상을 파란색(blue)으로 바꾸라는 의미
+        - font-size: 20px;은 글자 크기를 20px로 하라는 의미
+    - 전체적인 코드는 모든 li 태그의 색깔은 파란색으로, 크기는 20px로 하라는 의미
+
+
+2. CSS 선택자(CSS Selector)
+    2.1 태그 이름
+        p {
+            color: blue;
+            font-size: 20px;
+        }
+    - 예제 코드를 위 코드처럼 바꾸면 <p> 태그에 스타일이 적용
+    - 즉 쓴 태그에 스타일이 입혀진다
+    
+    2.2 아이디(id)
+        <li id="coffee">커피</li>
+        <li id="green-tea">녹차</li>
+        <li id="milk">우유</li>   
+    - 하나의 태그에만 스타일을 입히고 싶으면 아이디를 사용
+    - 아이디를 CSS 선택자로 활용하면 그 아이디를 가진 태그에만 스타일이 입혀짐
+    - 아이디를 상징하는 기호는 #
+        #green-tea {
+        color: blue;
+        font-size: 20px;
+        }
+    - 동일한 아이디를 여러 태그가 가질 수는 없다
+    - 하나의 태그는 아이디를 한 개만 가질 수 있다
+
+    2.3 클래스(class)
+        <li class="favorite">커피</li>
+        <li>녹차</li>
+        <li class="favorite">우유</li>
+    - 여러 HTML 태그에 공통으로 적용 가능
+    - 클래스를 상징하는 기호는 .
+        .favorite {
+        color: blue;
+        font-size: 20px;
+        }
+    - 하나의 태그 안에 여러 클래스를 가질 수 있다
+        <p class="favorite preview">이것은 첫 번째 문단입니다.</p>
+
+    - 클래스 이름 사이에 공백 추가
+
+    2.4 속성(attribute)
+    - 아이디와 클래스도 속성 중 하나
+    - 아이디와 클래스 외의 속성도 CSS 선택자로 사용할 수 있다
+    - alt 속성: 이미지가 로딩되지 않을 경우를 대비해서, 이 이미지가 어떤 텍스트인지 알려주는 역할
+        <img src='https://i.imgur.com/fvJLWdV.jpg' alt="green-tea"/>
+
+    - alt 속성의 값이 "green-tea"인 태그의 가로 길이를 300px로 하라
+        [alt="green-tea"] {
+        width: 300px;
+        }
+
+
+
+3. 파싱(Parsing)
+- 문자의 구조를 분석해서 원하는 정보를 얻어내는 것
+- Beautiful Soup: 파이썬에서 HTML을 파싱하는 모듈
+- '8. 파싱.py' 참고
+
+4. CSS 선택자 더 알아보기
+    4.1 OR 연산
+    - ,는 OR 연산을 의미
+    - 두 CSS 선택자 중 하나라도 해당되면 선택
+        <p class="one">paragraph 1</p>
+        <p class="two">paragraph 2</p>
+        <p class="three">paragraph 3</p>
+        <p class="four">paragraph 4</p>
+        <p class="five">paragraph 5</p>
+
+    - 클래스 'two'나 'four'인 태그의 색상을 빨강으로 바꾸라는 의미   
+        .two, .four {
+        color: red;
+        }
+
+    4.2 AND 연산
+    - 두 CSS 선택자를 붙여쓰면 됨
+        <p class="favorite">paragraph 1</p>
+        <p class="favorite">paragraph 2</p>
+        <p class="favorite private">paragraph 3</p>
+        <p class="private">paragraph 4</p>
+        <p class="private">paragraph 5</p>  
+    - "favorite" 클래스와 "private" 클래스를 모두 가진 태그를 선택
+        .favorite.private {
+        color: red;
+        }
+
+    4.3 중첩된 요소
+    - HTML 태그 안에 또 다른 HTML 태그가 있는 것
+    - <i>는 텍스트를 기울이는 효과
+        <i>디저트</i>
+        <p>
+            <i>다쿠아즈</i>
+            <i>마카롱</i>
+            <i>케이크</i>
+        </p>
+    - 모든 <i> 태그가 아닌, <p> 태그 안에 중첩된 <i>태그만 가져오고 싶을 때(디저트빼고 다쿠아즈, 마카롱, 케이크만)
+    - 띄어쓰기로 중첩 표현 가능
+    - <p>태그 안에 중첩된 <i>태그를 의미
+        p i {
+        color: red;
+        }
+
+5. 크롬 개발자 도구로 선택자 알아내기
+- 알고 싶은 요소를 우클릭하고 inspect 또는 검사를 클릭
+- 그러면 HTML 코드를 볼 수 있음
+- 개발자 도구에서 특정 HTML 요소를 오른쪽 클릭하고 Copy 메뉴의 Copy Selector를 클릭하면, CSS 선택자가 클립보드에 복사됩니다.  

@@ -1,0 +1,48 @@
+1. pandas(as pd)
+    1.1 개요
+    - R언어의 DataFrame을 다루는 기능을 가져온 라이브러리
+    - numpy로 만들어졌기에 numpy의 기본적 기능이 다 있다
+        - 그렇기에 numpy가 먼저 설치되어야 한다
+    - 표형식을 다루는 곳에서 강함
+    - 데이터 사이언스의 기본 
+
+    1.2 pandas의 DataFrame
+    - 2차원 형태의 데이터를 다루기 위한 자료형
+    - DataFrame: 표형식의 데이터를 담는 자료형(row, index(행) x column(열))
+    - column: 데이터의 특징(이름, 국적, 년도 등)을 담음
+    - row: 레코드(첫 번째 사람의 정보, 두 번째 사람의 정보 등)을 담음
+
+    1.3 numpy와 pandas의 차이
+    - 한 가지 타입만 배열에 담을 수 있음 vs 여러 타입을 같은 배열에 담을 수 있음
+    - column, row의 이름은 무조건 숫자 vs column, row의 이름 설정 가능
+
+2. pandas.ipynb
+    - my_df = pd.DateFrame(리스트, columns = [column 이름의 배열], index = [row 이름의 배열])
+        - 이때, column과 index의 길이는 리스트의 column, index 개수와 같아야 한다
+        - column, index의 이름을 설정하지 않으면 0, 1, 2... 순서로 작성됨
+    - my_df.columns: column의 이름 리스트 출력
+    - my_df.index: index의 이름 리스트 출력
+    - my_df.dtypes: 각 column의 자료형 출력
+        - 즉, 같은 column 안에는 같은 자료형만 있어야 한다
+        - int64: 정수
+        - float64: 소수
+        - object: 텍스트
+        - bool: 불린
+        - datetime64: 날짜와 시간
+        - category: 카테고리
+
+    - pd.Series(리스트): DataFrame이 2차원 형태의 데이터 자료형라면 Series는 일차원 형태의 데이터 자료형
+        - 이런 식으로 Series를 이용해 DataFrame을 만들 수도 있음
+        list_of_series = [
+            pd.Series(['dongwook', 50, 86]),
+            pd.Series(['ikjoong', 68, 91]),
+            pd.Series(['yoonsoo', 88, 75]),
+            pd.Series(['sineul', 89, 31])
+        ]
+        df = pd.DateFrame(list_of_series)
+    - 그 외에도 dictionary도 만들 수 있다
+
+    - pd.read_csv('파일경로와 이름', index_col = 0, header = None)
+        - csv 맨 첫줄을 자동으로 head로 사용(column의 이름으로)
+        - header = None을 추가하면 맨 첫줄이 아니라 0, 1... 로 임의 지정
+        - index_col = 0을 추가하면 column 첫 번째가 row의 이름이 아니라 column의 첫번째 값이 row이름으로 들어감

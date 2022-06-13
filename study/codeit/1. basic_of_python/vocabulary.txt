@@ -1,0 +1,4 @@
+korea: 한국
+USA: 미국
+japan: 일본
+china: 중국

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CsvFileAttributes">
+    <option name="attributeMap">
+      <map>
+        <entry key="\study\codeit\2. (미완)python_intermediate\cases_country.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\study\codeit\8. 데이터 사이언스 입문\1. 데이터 사이언스 시작하기\data\mega_millions.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\study\codeit\8. 데이터 사이언스 입문\3. 데이터 분석과 시각화\data\gdp.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\study\codeit\8. 데이터 사이언스 입문\3. 데이터 분석과 시각화\data\insurance.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\study\codeit\8. 데이터 사이언스 입문\3. 데이터 분석과 시각화\data\world_indexes.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\study\codeit\8. 데이터 사이언스 입문\4. 데이터 퀄리티 높이기\data\beer.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\study\codeit\8. 데이터 사이언스 입문\4. 데이터 퀄리티 높이기\data\movie_metadata.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\study\codeit\8. 데이터 사이언스 입문\4. 데이터 퀄리티 높이기\data\steam.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\study\codeit\9. 머신 러닝\3. 머신 러닝, 더 빠르고 정확하게\2. 정규화\data\admission_data.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\study\codeit\9. 머신 러닝\3. 머신 러닝, 더 빠르고 정확하게\2. 정규화\data\insurance.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\study\codeit\9. 머신 러닝\3. 머신 러닝, 더 빠르고 정확하게\3. 모델 평가와 하이퍼파라미터 고르기\data\admission_data.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\study\codeit\data\member-data.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\study\nado_coding\data science\Pandas\score.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
