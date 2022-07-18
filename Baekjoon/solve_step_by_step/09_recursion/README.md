@@ -2,7 +2,7 @@
 
 ## 1. 개요
 
-![infinite_power](https://w.namu.la/s/f5ca28ad51d0b30db063a0d5a5b65f76df3b68c55850e23c128fd6fc93634283ba252a079dcf9885f551a7b993f08acfd8e13bfa10092667820f1f94988c6b92c0306b1e68d05600733fb7c2e36b4275b66967a88f20dc8eac513c6aad4745f8cb3d1e65b5418d89f4cf5a9f85e12b7a)
+![infinite_power](https://w.namu.la/s/f5ca28ad51d0b30db063a0d5a5b65f76df3b68c55850e23c128fd6fc93634283ba252a079dcf9885f551a7b993f08acfd8e13bfa10092667820f1f94988c6b929885ea60482f8adb297e6cdabc8187d0c6613551e40fe47cbf7108cba9d74cf930d9b414b8dd6a0d72f673c805edcd77)
 
 재귀는 정의 단계에서 자신을 재참조하는 함수이다. 프랙탈같이 자신의 모양이 반복적으로 나오는 것 역시 재귀라고 할 수 있다.
   
