@@ -25,8 +25,6 @@
 
 #### 3.1.1 버블 정렬(Bubble sort)
 
-{% include url.html id="Ns4TPTC8whwurl"%}
-
 ![버블 정렬](https://w.namu.la/s/ee412a864c3bdcb6cf7077f8ef87e01d4353cf53e66d2a5f6b7def49d257d569a46c810b1b36b9924a495a697c60777bb82d25459c2cbb65e4a700c25351af9bf9e7008582b78e7e196d47c152b6e799671fdf87c45b27fbee160cd1fda16cd7)
 
 버블 정렬을 앞에 있는 1, 2번 원소부터 비교하고 정렬하는 것을 $n - 1$, $n$번째 원소까지 반복하여 정렬한 뒤 다시 처음으로 돌아가 이번엔 $n - 2$와 $n - 1$번째 까지 정렬해서 최대 ${n(n - 1)}\over{2}$번 정렬한다. 한 번 돌 때마다 마지막 하나가 정렬되는 것이 거품이 올라오는 것 같다고 하여 거품 정렬이다.
@@ -45,15 +43,11 @@ def bubble_sort(lst: list, len: int):
 
 #### 3.1.2 선택 정렬(Selection sort)
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/Ns4TPTC8whw" title="Select-sort with Gypsy folk dance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 ![선택 정렬](https://w.namu.la/s/979f72a99b510094586ff21e4630d82c8660df53ae68e7a0255aae2dceb4cc4f4f2d965119bacad3d0195454b90beca653ae376cc898f44f6ffca5df02afeb81e3f566959107c0c932d8cba9d63dab6b63860b10880ee2a54c038f7045f7349e)
 
 선택 정렬은 처음부터 끝까지 확인하고 가장 작은 것을 첫 번째로 옮긴 뒤, 두 번째에서 끝까지 확인하고 그 다음 작은 것을 두 번째로 놓아서 $n - 1$번 반복하는 방법이다. 어떻게 정렬되어있든지 일관성있게 ${n(n - 1)}\over{2}$에 비례하는 시간이 걸린다. 또한 버블정렬보다 두 배정도 빠르다.
 
 #### 3.1.3 삽입 정렬(Insertion sort)
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/ROalU379l3U" title="Insert-sort with Romanian folk dance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ![삽입 정렬](https://w.namu.la/s/e2cca975b1e03bd676ae5e11433526429e9cf77953039ca19a2df4b1112eb75c9c45701ca4f75bcb78194f07ec7b60f28040a4bae7ceed58729887ff62fc13f68dd60e9c102649ea37cbf9eda122ca66fcd9a9dc16843c92ab79b40f281a576a)
 
@@ -68,8 +62,6 @@ def bubble_sort(lst: list, len: int):
 
 #### 3.2.1 병합 정렬(Merge sort)
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/XaqR3G_NVoo" title="Merge-sort with Transylvanian-saxon (German) folk dance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 ![병합 정렬](https://w.namu.la/s/30bb5bb955f72d8a4b70c88e0cb83fe97ae0c349bd9c27d1204e8939df903ef7748c25b1928455ad76d70fd7a283b1c131feecabca2fe5a9c36b4ab72fe3e778ac69f11eb9b5acee9746fd02ee4e3aeadcbe4b6b6ac46e3b22a8d7ca092bb3c8)
 
 병합 정렬은 원소 개수가 1개 또는 0개가 될 때까지 두 부분으로 쪼개고 자른 순서의 역순으로 크기를 비교하며 병합해 나가는 방식의 정렬이다. 병합된 부분은 이미 정렬이 되어있기에 다시 비교하지 않아도 된다. 이는 대표적인 분할 정복 알고리즘이다.
@@ -78,8 +70,6 @@ def bubble_sort(lst: list, len: int):
 
 
 #### 3.2.2 힙 정렬(Heap sort)
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/Xw2D9aJRBY4" title="HEAP-sort with Hungarian (MEZŐSÉGI) folk dance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ![힙 정렬](https://w.namu.la/s/66b4423a08f9c1f37d88aab887d5c94db4c2944176c411836b4490e27dae7bd6169b75b365795892f53b32f31f8e24d34e94defe0352467bdc827096eddb0f212c7bbb660ec2c61453b1482e45870d7e5302db171baa9f761215d2a2abe48d74)
 
@@ -92,8 +82,6 @@ def bubble_sort(lst: list, len: int):
 선택 정렬과 거의 동일하며 가장 큰 원소를 뒤로 보낼 때, 하나씩 다 확인하느냐 힙으로 확인하느냐의 차이만 있다. 힙정렬은 추가적인 메모리가 전혀 필요하지 않으며 항상 $O(n \log n)$의 성능을 발휘하는 장점이 있다.
 
 #### 3.2.3 퀵 정렬(Quick sort)
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/ywWBy6J5gz8" title="Quick-sort with Hungarian (Küküllőmenti legényes) folk dance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ![퀵 정렬](https://w.namu.la/s/b7a7b2b91c02d2eee34e490103db5af75618192715ae430b0d64fac25acc09bc06dfedd96cf363ff2dd511d8dbdb1dce7961edfdd8d67239b5c5415e5fff879851d452cfd78c8b444ddc75afd7c936fa93172d75bc4eb43a0d3521f54b8980ef)
 
@@ -112,8 +100,6 @@ def bubble_sort(lst: list, len: int):
 파이썬은 퀵 정렬은 사용하지 않는데 퀵 정렬이 불안정 정렬이기 때문이다. 파이썬은 항상 안정(stable) 정렬을 사용한다.
 
 #### 3.2.4 트리 정렬(Tree sort)
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/n2MLjGeK7qA" title="Tree Sort | GeeksforGeeks" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 트리 정렬은 이진 탐색 트리를 만들어 정렬하는 방식이다. 힙 정렬과의 차이는 정렬될 자료의 각 원소 크기에 따라 부모 노드의 왼쪽 자식이 되느냐, 오른쪽 자식이 되느냐가 갈린다는 점이다.
 
