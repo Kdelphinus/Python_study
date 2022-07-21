@@ -25,7 +25,7 @@
 
 #### 3.1.1 버블 정렬(Bubble sort)
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/lyZQPjUT5B4" title="Bubble-sort with Hungarian ("Csángó") folk dance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+{% include url.html id="lyZQPjUT5B4url"%}
 
 ![버블 정렬](https://w.namu.la/s/ee412a864c3bdcb6cf7077f8ef87e01d4353cf53e66d2a5f6b7def49d257d569a46c810b1b36b9924a495a697c60777bb82d25459c2cbb65e4a700c25351af9bf9e7008582b78e7e196d47c152b6e799671fdf87c45b27fbee160cd1fda16cd7)
 
