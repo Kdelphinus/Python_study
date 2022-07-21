@@ -25,7 +25,7 @@
 
 #### 3.1.1 버블 정렬(Bubble sort)
 
-{% include url.html id="lyZQPjUT5B4url"%}
+{% include url.html id="Ns4TPTC8whwurl"%}
 
 ![버블 정렬](https://w.namu.la/s/ee412a864c3bdcb6cf7077f8ef87e01d4353cf53e66d2a5f6b7def49d257d569a46c810b1b36b9924a495a697c60777bb82d25459c2cbb65e4a700c25351af9bf9e7008582b78e7e196d47c152b6e799671fdf87c45b27fbee160cd1fda16cd7)
 
