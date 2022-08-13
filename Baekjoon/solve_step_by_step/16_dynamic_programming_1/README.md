@@ -15,7 +15,7 @@
 2. 주어진 부분 문제의 정답을 한 번만 계산하고 저장한다.
 3. 추후 다시 한 번 이 부분 문제를 이용할 때는 저장해둔 정답을 바로 산출하여 이용한다.
 
-![동적 계획법](https://w.namu.la/s/c72a6f355ce77b072b312cb52dbb116b2b45bb5260ebedf9f79f6b68b0300aeb44ba8ca7bac3cf478a525c4ba6f6e284847b2cbbf61059f7e42ec2ba752508249ef677a86d87daf293bfeceb2b6038467a0d39b9e685a2522ef9e81b75b16af9e4582907e4ffe434c31886a4841173d2)
+<img src="https://w.namu.la/s/c72a6f355ce77b072b312cb52dbb116b2b45bb5260ebedf9f79f6b68b0300aeb44ba8ca7bac3cf478a525c4ba6f6e284847b2cbbf61059f7e42ec2ba752508249ef677a86d87daf293bfeceb2b6038467a0d39b9e685a2522ef9e81b75b16af9e4582907e4ffe434c31886a4841173d2" height="500px" width="1500px">
 
 위 그림처럼 최적 부분 구조를 지닌 중복된 하위 문제들을 분할 정복으로 푸는 문제해결 방법이라고 설명할 수 있다.
 
