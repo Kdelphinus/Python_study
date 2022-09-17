@@ -338,4 +338,6 @@ tags
 # Persistent undo
 [._]*.un~
 
+practice.py
+
 # End of https://www.toptal.com/developers/gitignore/api/macos,vim
