@@ -76,3 +76,9 @@ def heap_sort(nums):
 
 
 print(heap_sort([4, 1, 7, 3, 8, 5]))  # [1, 3, 4, 5, 7, 8]
+
+
+"""힙 최댓값, 최솟값 가져오기"""
+heap = heapq.heapify([5, 2, 3, 1])
+# nlargest(가져올 개수, 가져올 곳)
+print(heapq.nlargest(1, heap))
