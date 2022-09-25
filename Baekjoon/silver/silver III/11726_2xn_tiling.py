@@ -1,14 +1,16 @@
+# 링크: https://cijbest.tistory.com/21
+
 MOD = 10007
 
 
 def tiling(n: int):
-    if n <= 3:
+    if n == 1:
         return n
 
-    prev, curr = 2, 3
-    for _ in range(n - 3):
-        prev, curr = curr, (curr + prev) % MOD
-    return curr
+    prev, curr = 1, 3
+    for _ in range(n - 2):
+        prev, curr = curr, (curr + prev * 2) % MOD
+    return curr % MOD
 
 
 if __name__ == "__main__":
