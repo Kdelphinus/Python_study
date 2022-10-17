@@ -1,6 +1,4 @@
-import sys, copy
-
-input = sys.stdin.readline
+import copy
 
 
 def stickers():
