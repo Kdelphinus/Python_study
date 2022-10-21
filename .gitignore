@@ -338,6 +338,11 @@ tags
 # Persistent undo
 [._]*.un~
 
+# What i add
 practice.py
+study/codeit
+study/wikidocs_Quiz
+study/CS_basic
+study/nado_coding
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,vim
