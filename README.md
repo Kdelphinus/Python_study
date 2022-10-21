@@ -6,3 +6,5 @@
 - goorm: 각종 goorm 강의 정리 백업
 - study: 각종 공부 자료들
 - tips: Python의 여러 기능
+
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=github-readme-stats)](https://github.com/anuraghazra/github-readme-stats)
