@@ -1,5 +1,4 @@
-# 반례: G*(A-B*(C/D+E)/F)
-# 현재 (의 우선순위가 연산자의 우선순위보다 밀림
+# https://pannchat.tistory.com/entry/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EB%B0%B1%EC%A4%80-%ED%9B%84%EC%9C%84%ED%91%9C%EA%B8%B0%EC%8B%9D-python
 
 import sys
 
@@ -8,32 +7,27 @@ INPUT = sys.stdin.readline
 
 def postfix_notation(string: str) -> str:
     ans = ""
-    i = 0
-    bracket, operator = [], []
-    while i < len(string):
-        if string[i] == "(":
-            bracket.append(1)
-        elif string[i] == ")":
-            bracket.pop()
-            for _ in range(2):
-                if operator:
-                    ans += operator.pop()
-        elif string[i] == "+" or string[i] == "-":
-            operator.append(string[i])
-        elif string[i] == "*" or string[i] == "/":
-            if string[i + 1] == "(":
-                operator.append(string[i])
-            else:
-                ans += string[i + 1]
-                ans += string[i]
-                i += 1
-                while operator:
-                    ans += operator.pop()
+    stack = []
+    for s in string:
+        if s.isalpha():
+            ans += s
         else:
-            ans += string[i]
-        i += 1
-    while operator:
-        ans += operator.pop()
+            if s == "(":
+                stack.append(s)
+            elif s == "*" or s == "/":
+                while stack and (stack[-1] == "*" or stack[-1] == "/"):
+                    ans += stack.pop()
+                stack.append(s)
+            elif s == "+" or s == "-":
+                while stack and stack[-1] != "(":
+                    ans += stack.pop()
+                stack.append(s)
+            elif s == ")":
+                while stack and stack[-1] != "(":
+                    ans += stack.pop()
+                stack.pop()
+    while stack:
+        ans += stack.pop()
     return ans
 
 
