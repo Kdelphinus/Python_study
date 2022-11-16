@@ -8,6 +8,15 @@ INPUT = sys.stdin.readline
 
 
 def joystick(name: str) -> int:
+    """
+    이름을 바꾸는 가장 최소 횟수를 반환하는 함수
+    Args:
+        name: 써야 할 이름
+
+    Returns:
+        change + move: 알파벳을 바꾸는 횟수 + 철자를 이동하는 횟수
+
+    """
     length = len(name)
     offsets = [min(ord(s) - ord("A"), ord("Z") - ord(s) + 1) for s in name]
     change = sum(offsets)
