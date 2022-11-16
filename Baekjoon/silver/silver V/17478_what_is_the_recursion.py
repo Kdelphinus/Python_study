@@ -1,6 +1,3 @@
-"""17478 재귀함수가 뭔가요?"""
-
-
 def chatbot(i: int, n: int):
     print("_" * (i * 4), end="")
     print('"재귀함수가 뭔가요?"')
