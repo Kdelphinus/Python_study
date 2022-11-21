@@ -15,6 +15,7 @@ def polar_bear(s: str) -> int:
                 day = max(day, tmp)
                 tmp = 0
             idx += 1
+        day = max(day, tmp)
         while idx < len(s) and s[idx] == ")":
             if stack and stack[-1] == "(":
                 stack.pop()
