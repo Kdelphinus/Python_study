@@ -1,57 +1,32 @@
+# 해설링크: https://seongonion.tistory.com/53
+
 import sys
 
 INPUT = sys.stdin.readline
 
 
-def INPUT_alphabet(s: str, a: str, c: int) -> (str, int):
-    """
-    커서 왼쪽에 문자를 추가하는 함수
-    Args:
-        s: 현재 문자열
-        a: 추가할 문자
-        c: 현재 커서 위치
-
-    Returns:
-        입력한 후 문자열과 커서 위치
-    """
-    return s[:c] + a + s[c:], c + 1
-
-
-def backspace(s: str, c: int) -> (str, int):
-    """
-    커서 왼쪽의 문자를 지우는 함수
-    Args:
-        s: 현재 문자열
-        c: 현재 커서 위치
-
-    Returns:
-        지운 후 문자열과 커서 위치
-    """
-    return s[: c - 1] + s[c:], c - 1
-
-
 def editor(s: str) -> str:
     """
-    문장 편집기
+    두 개의 스택으로 커서의 위치를 표현하여 에디터를 작동하는 함수
     Args:
         s: 주어진 문자열
 
     Returns:
-        s: 편집된 문자열
+        모든 작업이 끝난 문자열
 
     """
-    c = len(s)
+    stack1, stack2 = list(s), []  # 커서를 기준으로 앞 뒤를 두 개의 스택으로 나눔
     for _ in range(int(INPUT())):
-        orders = list(INPUT().split())
-        if orders[0] == "L" and c > 0:
-            c -= 1
-        elif orders[0] == "D" and c < len(s):
-            c += 1
-        elif orders[0] == "B" and c > 0:
-            s, c = backspace(s, c)
-        elif orders[0] == "P":
-            s, c = INPUT_alphabet(s, orders[1], c)
-    return s
+        command = list(INPUT().split())
+        if command[0] == "L" and stack1:
+            stack2.append(stack1.pop())
+        elif command[0] == "D" and stack2:
+            stack1.append(stack2.pop())
+        elif command[0] == "B" and stack1:
+            stack1.pop()
+        elif command[0] == "P":
+            stack1.append(command[1])
+    return "".join(stack1 + stack2[::-1])
 
 
 if __name__ == "__main__":
