@@ -22,7 +22,7 @@ brute force는 모든 방법을 탐색하는 방법이다. 한 마디로 노가�
 python은 다른 언어들에 비해서 속도가 느리다. 그렇기에 brute force를 사용한 문제들에 경우 타 언어에 비해서 더욱 느리다. 
 그렇기에 파이썬과 호환되며 더 빠른 pypy를 사용하거나 sys을 불러와 입출력 속도를 줄여서 활용해야 한다.
 
-```
+```python
 import sys
 
 input = sys.stdin.readline
