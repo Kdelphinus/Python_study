@@ -45,7 +45,7 @@
 
 ### 4.1 재귀함수 형태
 
-```
+```python
 def fibonacci(num: int):
 	if num <= 1:
 		return 1
@@ -58,7 +58,7 @@ def fibonacci(num: int):
 
 ### 4.2 메모이제이션 형태
 
-```
+```python
 fib = {1: 1, 2: 1}
 
 def fibonacci(num: int):
@@ -73,7 +73,7 @@ def fibonacci(num: int):
 
 ### 4.3 타뷸레이션 형태
 
-```
+```python
 fib = [0, 1, 1]
 
 def fib_init(num: int):
@@ -88,7 +88,7 @@ def fibonacci(num: int):
 
 ### 4.4 또 다른 형태
 
-```
+```python
 def fibonacci(num: int):
 	if num <= 2:
 		return 1
@@ -106,7 +106,7 @@ def fibonacci(num: int):
 
 python의 경우 메모이제이션을 위한 라이브러리가 존재한다. ```functools.lru_cache```를 사용하면 결과를 저장할 별도의 공간을 만들지 않아도 된다.
 
-```
+```python
 from functools import lru_cache
 
 
