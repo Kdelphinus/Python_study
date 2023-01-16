@@ -37,7 +37,7 @@
 (이 [블로그](https://joooing.tistory.com/entry/%EC%9E%AC%EA%B7%80-%E2%86%92-%EA%BC%AC%EB%A6%AC-%EC%9E%AC%EA%B7%80-Tail-Recursion) 의 설명과 사진을 이용하니 자세하게 보고 싶다면 참고할 것)
 
 ### 4.1 일반 재귀
-```
+```python
 def factorial(n: int):
     if n == 1:
         return 1
@@ -50,7 +50,7 @@ return 값에서 알 수 있듯이 n에서부터 하나씩 줄여가며 스택�
 ![의인화](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FISHzh%2FbtqSTItCl1V%2FntnZlqRZbex9roPON36bQk%2Fimg.png)
 
 ### 4.2 꼬리 재귀
-```
+```python
 def factorial(n: int, total = 1: int):
     if n == 1:
         return 1
@@ -80,7 +80,7 @@ def factorial(n: int, total = 1: int):
 그렇기에 어지간히 간단한 재귀가 아닌 이상 무조건 함수 깊이 제한에 막힌다. 
 따라서 일반적으로 아래와 같이 함수 깊이 제한을 늘려놓고 하는 것이 일반적이다. 
 
-```
+```python
 import sys
 
 sys.setrecursionlimit(10 ** 8)
