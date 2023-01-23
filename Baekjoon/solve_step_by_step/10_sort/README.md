@@ -16,6 +16,7 @@
       4. [트리 정렬](#324-트리-정렬-tree-sort)
 4. [그 외의 정렬들](#4-그-외의-정렬들)
 5. [Python의 경우](#5-python의-경우)
+6. [Tim sort](#6-tim-sort)
 
 ## 1. 개요
 
@@ -37,6 +38,8 @@
 이렇듯 이진 탐색은 데이터를 조회하는데 핵심인 알고리즘이며 이를 위해 효율적인 정렬은 꼭 필요하다.
 
 ## 3. 대표적인 종류
+
+![정렬의 종류](image/kind_of_sort.png)
 
 ### 3.1 $O(n^2)$
 
@@ -137,7 +140,7 @@ def bubble_sort(lst: list, len: int):
 
 ## 5. Python의 경우
 
-python은 sort()(주어진 리스트를 정렬)와 sorted()(정렬된 새로운 리스트를 생성)라는 내장 정렬 함수가 있다. 두 개 모두 stable 정렬이며 다양한 옵션으로 원하는 정렬을 할 수 있다.
+python은 tim sort로 구현된 sort()(주어진 리스트를 정렬)와 sorted()(정렬된 새로운 리스트를 생성)라는 내장 정렬 함수가 있다. 두 개 모두 stable 정렬이며 다양한 옵션으로 원하는 정렬을 할 수 있다.
 
 기본적으로 sort() 함수(sorted()도 동일)는 오름차순으로 정렬한다. 또한 이중 리스트를 정렬한다면 그 안의 값 중 가장 앞의 원소를 우선적으로 오름차순 정렬한다.
 
@@ -192,6 +195,14 @@ python은 sort()(주어진 리스트를 정렬)와 sorted()(정렬된 새로운 
 이때, 위 옵션은 각 문자열의 3을 곱한 것을 기준으로 내림차순하겠다는 의미이다.
 즉, ```["666", "222", "212121", "232323", "101010"]```을 기준으로 내림차순한다는 의미이다.
 
-## 6. 파이썬의 정렬 방법(Tim sort)
-[참고 자료 1](https://d2.naver.com/helloworld/0315536)  
-[참고 자료 2](https://questionet.tistory.com/61)
+## 6. Tim sort
+
+위에서 잠깐 언급했듯이, 파이썬은 **Tim sort** 를 이용하여 정렬을 진행한다. 
+
+
+[파이썬으로 구현한 Tim sort](https://github.com/Kdelphinus/Python_study/blob/main/Baekjoon/solve_step_by_step/10_sort/TimSort.py)
+
+## 참고자료
+
+- [geeks for geeks, TimSort](https://www.geeksforgeeks.org/timsort/)
+- [Naver D2, Tim sort에 대해 알아보자](https://d2.naver.com/helloworld/0315536)
