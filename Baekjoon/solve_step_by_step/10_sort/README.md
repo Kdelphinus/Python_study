@@ -197,7 +197,7 @@ python은 tim sort로 구현된 sort()(주어진 리스트를 정렬)와 sorted(
 
 # 6. Tim sort
 
-앞서 이야기했듯이 파이썬은 2002년 Tim Peters가 개발한 **Tim sort** 를 사용한다. Tim sort는 삽입 정렬과 병합 정렬를 결합하여 만든 정렬이다. 왜 새로운 정렬을 만들었고 두 정렬을 결합하여 얼마나 더 효율적이게 되었는지 확인해보자.
+앞서 이야기했듯이 파이썬은 2002년 Tim Peters가 개발한 **Tim sort** 를 사용한다. Tim sort는 삽입 정렬과 병합 정렬를 결합하여 만든 정렬이다. 왜 새로운 정렬을 만들었고 두 정렬을 결합하여 얼마나 더 효율적이게 되었는지 확인해보자. ([파이썬으로 구현한 간략한 Tim sort](https://github.com/Kdelphinus/Python_study/blob/main/Baekjoon/solve_step_by_step/10_sort/TimSort.py))
 
 ## 새로운 정렬의 필요성
 
@@ -256,8 +256,6 @@ Tim sort에서 왜 하필 병합 정렬과 삽입 정렬을 결합했을까?
 $$
 C_i \times n^2 \lt C_q \times n \log n
 $$
-
-
 
 즉, 작은 $n$에 한해선 퀵 정렬보다 삽입 정렬이 빠른 것이다.
 
@@ -366,8 +364,6 @@ run $B$의 크기가 더 작을 경우엔 반대로 진행하면 된다. $B$를 
 ## 마무리
 
 Tim sort는 병합 정렬을 기반으로 하되, 좀 더 효율적으로 run으로 나누고 제각기 다른 크기를 가진 run을 최대한 효율적인 방법으로 병합하여 실생활 데이터의 특성을 이용하여 여러 가지 최적화 기법을 도입한 정렬 알고리즘이다. 무작위 데이터에선 속도가 빠른 편은 아니지만 일정한 패턴이 있는 실생활의 데이터에 대해선 빠른 성능을 보여주고 안정적이며 최악의 경우에도 시간 복잡도가 $O(n \log n)$이기에 많은 언어에서 표준 정렬 알고리즘으로 사용하고 있다.
-
-[파이썬으로 구현한 간략한 Tim sort](https://github.com/Kdelphinus/Python_study/blob/main/Baekjoon/solve_step_by_step/10_sort/TimSort.py)
 
 ## 참고자료
 
