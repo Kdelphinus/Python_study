@@ -8,7 +8,7 @@ def min_coin(dp: list, i: int) -> int:
     min_cnt = INF
     for j in (1, 2, 5, 7):
         min_cnt = min(min_cnt, 1 + dp[i - j])
-    return min_cnt
+    return int(min_cnt)
 
 
 def coin_cnt(n: int) -> int:
