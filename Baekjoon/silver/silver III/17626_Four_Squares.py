@@ -10,8 +10,8 @@ def find_square(n: int) -> int:
         min_value = float("inf")
         j = 1
 
-        while j ** 2 <= i:
-            min_value = min(min_value, dp[i - j ** 2])
+        while j**2 <= i:
+            min_value = min(min_value, dp[i - j**2])
             j += 1
         dp.append(min_value + 1)
     return dp[n]
