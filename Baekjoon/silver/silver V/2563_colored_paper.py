@@ -1,3 +1,6 @@
+"""2563 색종이"""
+
+
 def paper_init(width: int = 100, height: int = 100) -> list:
     return [[0] * (width + 1) for _ in range(height + 1)]
 
