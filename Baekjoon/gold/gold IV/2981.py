@@ -22,7 +22,7 @@ for i in range(num):  # 모든 수의 차이의 최대 공약수를 구한다
     if i > 1:
         min_gcd = gcd(min_gcd, abs(numbers[i] - numbers[i - 1]))
 
-root_min_gcd = int(min_gcd ** 0.5)  # 중복된 값을 방지하기 위해
+root_min_gcd = int(min_gcd**0.5)  # 중복된 값을 방지하기 위해
 
 for i in range(2, root_min_gcd + 1):  # 1과 자기 자신을 제외한 약수를 구한다
     if min_gcd % i == 0:
