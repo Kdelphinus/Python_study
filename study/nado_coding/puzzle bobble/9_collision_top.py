@@ -2,6 +2,7 @@
 import pygame
 import os, random, math
 
+
 # 버블 클래스 생성
 class Bubble(pygame.sprite.Sprite):
     def __init__(self, image, color, position=(0, 0)):
@@ -66,7 +67,7 @@ class Pointer(pygame.sprite.Sprite):
 # 맵 만들기
 def setup():
     global map
-    
+
     map = [
         list("RRYYBBGG"),
         list("RRYYBBG/"),  # /: 버블이 위치할 수 없는 곳

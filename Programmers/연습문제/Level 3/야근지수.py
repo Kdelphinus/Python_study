@@ -17,5 +17,5 @@ def solution(n, works):
         n -= 1
 
     for minus, plus in heap:
-        answer += plus ** 2
+        answer += plus**2
     return answer

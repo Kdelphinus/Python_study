@@ -30,12 +30,12 @@ for i in range(t):
     c = b - a
     num = 1
     while True:
-        if num ** 2 <= c < (num + 1) ** 2:
+        if num**2 <= c < (num + 1) ** 2:
             break
         num += 1
-    if num ** 2 == c:  # 거리가 제곱근 일 때
+    if num**2 == c:  # 거리가 제곱근 일 때
         print((num * 2) - 1)
-    elif num ** 2 < c <= num ** 2 + num:  # 거리가 두 제곱수 사이의 중간값보다 작을 때
+    elif num**2 < c <= num**2 + num:  # 거리가 두 제곱수 사이의 중간값보다 작을 때
         print(num * 2)
     else:  # 거리가 두 제곱수 사이의 중간값보다 클 때
         print((num * 2) + 1)

@@ -29,7 +29,6 @@ import heapq as hq
 
 
 def solution(scoville, K):
-
     hq.heapify(scoville)  # 힙으로 만듬
     answer = 0
     while True:

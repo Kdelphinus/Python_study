@@ -1,7 +1,7 @@
 """1012 유기농 배추"""
 import sys
 
-sys.setrecursionlimit(10 ** 8)  # 재귀 제한을 늘림
+sys.setrecursionlimit(10**8)  # 재귀 제한을 늘림
 input = sys.stdin.readline
 
 

@@ -119,7 +119,7 @@
 # anwser = input("좋아하는 과일은: ")
 # if anwser in fruit.values():
 #     print("정답입니다.")
-# else: 
+# else:
 #     print("오답입니다.")
 
 # 121

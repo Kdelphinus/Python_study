@@ -82,7 +82,7 @@ def solution(grid):
 """DFS를 이용한 풀이"""
 import sys
 
-sys.setrecursionlimit(10 ** 6)
+sys.setrecursionlimit(10**6)
 
 
 def out(x, y, d, grid, dic):

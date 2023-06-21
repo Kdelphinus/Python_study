@@ -1,4 +1,4 @@
-# 201 ~ 203 
+# 201 ~ 203
 # def print_coin():
 #     print("비트코인")
 
@@ -24,7 +24,7 @@
 #     print(문자열)
 
 # 함수("안녕")
-# 함수("Hi") 
+# 함수("Hi")
 
 # 212
 # def plus(a, b):
@@ -129,7 +129,7 @@
 
 # def calc_monthly_salary(annual_salary):
 #     monthly_pay = int(annual_salary / 12)
-#     return monthly_pay  
+#     return monthly_pay
 # a = calc_monthly_salary(115324786221) # return 함수를 넣으면 a의 값이 저장
 # print(a)
 

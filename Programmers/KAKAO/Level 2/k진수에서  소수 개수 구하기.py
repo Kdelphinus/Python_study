@@ -22,7 +22,7 @@ def create_prime_number(num):
     """에라토스테네스의 체를 반환하는 함수"""
     prime_number = [True] * (num + 1)
     prime_number[1] = False
-    for i in range(2, int(num ** 0.5) + 2):
+    for i in range(2, int(num**0.5) + 2):
         if prime_number[i]:
             for j in range(i * 2, num + 1, i):
                 prime_number[j] = False
@@ -32,7 +32,7 @@ def create_prime_number(num):
 
 def isPrime(num):
     """num이 소수인지 판별하는 함수"""
-    for i in range(3, int(num ** 0.5) + 1):
+    for i in range(3, int(num**0.5) + 1):
         if num % i == 0:
             return False
     return True

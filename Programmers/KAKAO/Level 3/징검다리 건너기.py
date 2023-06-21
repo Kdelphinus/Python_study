@@ -3,7 +3,7 @@
 """이분 탐색을 사용"""
 import sys
 
-sys.setrecursionlimit(10 ** 8)
+sys.setrecursionlimit(10**8)
 
 answer = 0
 

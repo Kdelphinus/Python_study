@@ -69,7 +69,6 @@ decode = [
 ]
 
 for tc in range(1, 1 + T):
-
     # 입력받는 글자(인코딩 된 상태)
     word = list(input())
 
@@ -80,7 +79,6 @@ for tc in range(1, 1 + T):
     res = ""
 
     for q in range(length):
-
         # word -> 표1에 따라 숫자로 변환
         num = decode.index(word[q])
 
@@ -100,7 +98,6 @@ for tc in range(1, 1 + T):
 
     # 글자의 길이 * 6에서 8비트씩 자름
     for w in range(length * 6 // 8):
-
         # 8비트씩 자르기
         # 자른 값을 10진수로 변환
         e = int(res[w * 8 : w * 8 + 8], 2)

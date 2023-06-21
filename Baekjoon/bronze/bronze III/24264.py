@@ -7,5 +7,5 @@ def men_of_passion(lst: list, n: int) -> int:
 
 
 n = int(input())
-print(n ** 2)
+print(n**2)
 print(2)

@@ -6,7 +6,7 @@ def prime_list(n):
     prime_number = [True] * (n + 1)
     prime_number[1] = False
 
-    for i in range(2, int(n ** 0.5) + 2):
+    for i in range(2, int(n**0.5) + 2):
         if prime_number[i]:
             for j in range(i + i, n + 1, i):
                 prime_number[j] = False

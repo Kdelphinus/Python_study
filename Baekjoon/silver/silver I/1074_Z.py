@@ -1,6 +1,6 @@
 import sys
 
-sys.setrecursionlimit(10 ** 8)
+sys.setrecursionlimit(10**8)
 
 
 def find_position(n: int, r: int, c: int, start: int):
@@ -14,15 +14,15 @@ def find_position(n: int, r: int, c: int, start: int):
         else:
             return start + 3
 
-    side = 2 ** n // 2
+    side = 2**n // 2
     if side > r and side > c:
         return find_position(n - 1, r % side, c % side, start)
     elif side > r:
-        return find_position(n - 1, r % side, c % side, start + side ** 2)
+        return find_position(n - 1, r % side, c % side, start + side**2)
     elif side > c:
-        return find_position(n - 1, r % side, c % side, start + side ** 2 * 2)
+        return find_position(n - 1, r % side, c % side, start + side**2 * 2)
     else:
-        return find_position(n - 1, r % side, c % side, start + side ** 2 * 3)
+        return find_position(n - 1, r % side, c % side, start + side**2 * 3)
 
 
 if __name__ == "__main__":

@@ -1,5 +1,6 @@
 """월간 코드 챌린지 시즌 1"""
 
+
 # 링크: https://developnote.tistory.com/26
 def solution(n):
     anw = [[0 for j in range(1, i + 1)] for i in range(1, n + 1)]

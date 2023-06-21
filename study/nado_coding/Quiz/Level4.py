@@ -21,16 +21,16 @@ from random import *
 words = ["apple", "banana", "melon", "orange", "egg"]
 word = choice(words)
 print("answer : " + word)
-letters = "" # 사용자로부터 지금까지 입력받은 모든 알파벳
+letters = ""  # 사용자로부터 지금까지 입력받은 모든 알파벳
 
 while True:
     succeed = True
     print()
     for w in word:
         if w in letters:
-            print(w, end = " ")
+            print(w, end=" ")
         else:
-            print("_", end = " ")
+            print("_", end=" ")
             succeed = False
     print()
 

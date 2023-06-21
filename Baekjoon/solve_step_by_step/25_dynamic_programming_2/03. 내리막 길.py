@@ -1,7 +1,7 @@
 """1520 내리막 길"""
 import sys
 
-sys.setrecursionlimit(10 ** 8)  # 파이썬 재귀 깊이 제한을 10 ** 8로 설정
+sys.setrecursionlimit(10**8)  # 파이썬 재귀 깊이 제한을 10 ** 8로 설정
 input = sys.stdin.readline
 
 n, m = map(int, input().split())  # n x m

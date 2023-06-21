@@ -1,5 +1,6 @@
 # 해설은 단계별로 풀기 15단계, 검문 문제 참고
 
+
 def gcd(a: int, b: int) -> int:
     if a < b:
         tmp = b

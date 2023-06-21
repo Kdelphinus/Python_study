@@ -2,7 +2,7 @@
 
 import sys
 
-sys.setrecursionlimit(10 ** 8)
+sys.setrecursionlimit(10**8)
 input = sys.stdin.readline
 cnt = 1
 

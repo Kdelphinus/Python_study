@@ -13,7 +13,6 @@ def solution(key, lock):
         for j in range(n + m - 1):
             # key를 90도씩 회전
             for _ in range(4):
-
                 # key를 lock에 끼워봄
                 for y in range(i, i + n):
                     for x in range(j, j + n):
@@ -49,6 +48,7 @@ print(solution(key, lock))
 
 """numpy를 쓰지 않는 답안"""
 # 링크: https://johnyejin.tistory.com/127
+
 
 # 90도 회전
 def rotation(arr):

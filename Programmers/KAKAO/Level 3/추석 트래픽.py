@@ -1,5 +1,6 @@
 """2018 KAKAO BLIND RECRUITMENT"""
 
+
 # 풀이: https://mjmjmj98.tistory.com/127
 def throughput(log, start, end):
     cnt = 0

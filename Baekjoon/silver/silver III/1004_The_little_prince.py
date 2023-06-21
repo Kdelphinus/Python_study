@@ -14,7 +14,7 @@ def check_circle(planet: list, position: list):
     cx, cy, r = planet
     x, y = position
 
-    if r ** 2 > (cx - x) ** 2 + (cy - y) ** 2:
+    if r**2 > (cx - x) ** 2 + (cy - y) ** 2:
         return 1
     return 0
 

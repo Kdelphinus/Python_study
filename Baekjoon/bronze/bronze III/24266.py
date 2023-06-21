@@ -8,5 +8,5 @@ def men_of_passion(lst: list, n: int) -> int:
 
 
 n = int(input())
-print(n ** 3)
+print(n**3)
 print(3)

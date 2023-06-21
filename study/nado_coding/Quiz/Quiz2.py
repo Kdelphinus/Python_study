@@ -8,6 +8,7 @@
 # 오프라인 스터디 모임 날짜는 매월 x 일로 선정되었습니다.로 출력
 
 from random import *
-offline_day =  randint(4,28)
-print("오프라인 스터디 모임 날짜는 매월",offline_day,"일로 선정되었습니다.")
+
+offline_day = randint(4, 28)
+print("오프라인 스터디 모임 날짜는 매월", offline_day, "일로 선정되었습니다.")
 print("오프라인 스터디 모임 날짜는 매월" + str(offline_day) + "일로 선정되었습니다.")

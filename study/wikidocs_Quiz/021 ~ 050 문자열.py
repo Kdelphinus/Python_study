@@ -21,7 +21,7 @@
 # phone_num = phone_number.replace("-", " ")
 # print(phone_num)
 
-# 026 025에 있는 번호를 붙여서 출력 
+# 026 025에 있는 번호를 붙여서 출력
 # phone_num_2 = phone_number.replace("-","")
 # print(phone_num_2)
 
@@ -67,7 +67,7 @@
 # t2 = "java"
 # print((t1+" "+t2+" ")*4)
 
-# 035 
+# 035
 # name1 = "김민수"
 # age1 = 10
 # name2 = "이철희"

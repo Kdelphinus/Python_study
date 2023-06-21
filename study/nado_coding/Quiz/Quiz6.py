@@ -10,7 +10,7 @@
 # 조건2 : 표준 체중은 소수점 둘째자리까지 표시
 
 # (출력예제)
-# 키 175cm 남자의 표준 체중은 67.38kg입니다. 
+# 키 175cm 남자의 표준 체중은 67.38kg입니다.
 
 # def std_weight(height, gender):
 #     if gender == "남자":
@@ -23,13 +23,14 @@
 # print("키 {0}cm {1}의 표준 체중은 {2}kg입니다." .format(height, gender, weight))
 
 
-def std_weight(height, gender): # 키는 m 단위, 성별은 남자/여자
+def std_weight(height, gender):  # 키는 m 단위, 성별은 남자/여자
     if gender == "남자":
         return 22 * height * height
     else:
         return 21 * height * height
 
-height = 175 # cm 단위
+
+height = 175  # cm 단위
 gender = "남자"
 weight = round(std_weight(height / 100, gender), 2)
-print("키 {0}cm의 {1}의 표준 체중은 {2}kg 입니다." .format(height, gender, weight))
+print("키 {0}cm의 {1}의 표준 체중은 {2}kg 입니다.".format(height, gender, weight))

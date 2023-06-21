@@ -7,7 +7,7 @@
 
 #     def __del__(self):
 #         print("나의 죽음을 알리지 말라")
-    
+
 #     def who(self):
 #         print("이름: {0}  나이: {1}  성별: {2}".format(areum.name, areum.age, areum.gender))
 
@@ -39,7 +39,7 @@
 
 #     def set_code(self, code):
 #         self.code = code
-    
+
 #     def set_PER(self, PER):
 #         self.PER = PER
 
@@ -51,7 +51,7 @@
 
 #     def get_name(self):
 #         return self.name
-        
+
 #     def get_code(self):
 #         return self.code
 
@@ -168,7 +168,7 @@
 #     def __init__(self, tire, price):
 #         self.tire = tire
 #         self.price = price
-    
+
 #     def 정보(self):
 #         print("바퀴수", self.tire)
 #         print("가격", self.price)

@@ -27,7 +27,7 @@ solutions = [
     for x in range(1, 30)
     for y in range(x, 30)
     for z in range(y, 30)
-    if x ** 2 + y ** 2 == z ** 2
+    if x**2 + y**2 == z**2
 ]
 # [(3, 4, 5), (5, 12, 13), (6, 8, 10), (7, 24, 25), (8, 15, 17), (9, 12, 15), (10, 24, 26), (12, 16, 20), (15, 20, 25), (20, 21, 29)]
 
@@ -102,7 +102,7 @@ print(*[xt[i] for i in x])
 
 """ 4. generator expression """
 # 다음 Generator는 제곱수를 만들어낸다
-gen = (x ** 2 for x in range(10))
+gen = (x**2 for x in range(10))
 print(gen)
 # <generator object <genexpr> at 0x105bde5c8>
 print(next(gen))  # call 1
@@ -121,6 +121,6 @@ StopIteration
 
 # Yes, it is an just generator. You can sum the yielding values.
 # GE로 생성한 Generator도 yield를 가진 함수로 생성한 것과 동일한 Generator이기 때문에, 똑같이 sum을 사용할 수 있다. (iterable 객체)
-gen = (x ** 2 for x in range(10))
+gen = (x**2 for x in range(10))
 sum_of_squares = sum(gen)
 # 285

@@ -89,7 +89,6 @@ def solution(rows, columns, queries):
         r1, c1, r2, c2 = a - 1, b - 1, c - 1, d - 1
 
         for i in range(c1, c2 + 1):
-
             stack.append(board[r1][i])
             if len(stack) == 1:
                 continue

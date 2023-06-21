@@ -5,7 +5,7 @@ def max_divisor(num: int):
     if num == 1:
         return 0
     max_div = 1
-    for i in range(2, int(num ** 0.5) + 1):
+    for i in range(2, int(num**0.5) + 1):
         if i > 10000000:
             break
         if num % i == 0:

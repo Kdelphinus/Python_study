@@ -1,4 +1,5 @@
 import pickle
+
 # profile_file = open("profile.pickle", "wb") # b는 바이너리를 의미, 피클에선 b가 필수
 # profile = {"이름":"박명수", "나이":30, "취미":["축구", "골프", "코딩"]}
 # print(profile)

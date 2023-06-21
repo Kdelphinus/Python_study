@@ -3,7 +3,7 @@ def solution(n):
 
     for i in range(2, n + 1):
         flag = True
-        for j in range(2, int(i ** 0.5) + 1):  # 제곱근까지만 확인
+        for j in range(2, int(i**0.5) + 1):  # 제곱근까지만 확인
             if i % j == 0:  # 나눠지는게 있으면 소수가 아님
                 flag = False
                 break

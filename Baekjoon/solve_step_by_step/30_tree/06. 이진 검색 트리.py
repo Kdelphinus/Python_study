@@ -3,7 +3,7 @@
 # 링크: https://www.acmicpc.net/source/30813571
 import sys
 
-sys.setrecursionlimit(10 ** 8)
+sys.setrecursionlimit(10**8)
 input = sys.stdin.readline
 
 
@@ -46,7 +46,7 @@ pre_to_post(0, len(preorder) - 1)
 # 이진 검색 트리는 왼쪽은 루트보다 작고 오른쪽은 루트보다 큰 것을 기억할 것
 import sys
 
-sys.setrecursionlimit(10 ** 8)
+sys.setrecursionlimit(10**8)
 input = sys.stdin.readline
 
 

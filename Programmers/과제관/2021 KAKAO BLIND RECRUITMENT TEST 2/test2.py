@@ -88,7 +88,6 @@ def near(auth_key):  # score = 566.7269050312433,  failed_requests_count = 1679
             flag = False
 
             while idx < 10:
-
                 if flag:
                     min_num = 101
                     min_next_spot = 0

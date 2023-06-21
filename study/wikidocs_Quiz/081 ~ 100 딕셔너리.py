@@ -3,12 +3,12 @@
 # *valid_score, _, __ = scores
 # print(valid_score, _, __)
 
-# 082 
+# 082
 # scores = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9.9, 9.5, 7.8, 9.4]
 # a, b, *vaild_score = scores
 # print(vaild_score)
 
-# 083 
+# 083
 # scores = [8.8, 8.9, 8.7, 9.2, 9.3, 9.7, 9.9, 9.5, 7.8, 9.4]
 # a, *vaild_score, b = scores
 # print(vaild_score)
@@ -23,7 +23,7 @@
 # ice_cream = {"메로나" : 1000, "폴라포" : 1200, "빵빠레" : 1800}
 # print(ice_cream)
 
-# 086 
+# 086
 # ice_cream["죠스바"] = 1200
 # ice_cream["월드콘"] = 1500
 # print(ice_cream)
@@ -40,7 +40,7 @@
 # del ice_cream["메로나"]
 # print(ice_cream)
 
-# 090 
+# 090
 # 없는 값을 get으로 찾으면 None이나 입력한 기본값으로
 # dic[]으로 출력하면 오류가 생긴다.
 
@@ -85,7 +85,7 @@ result = dict(zip(keys, vals))
 print(result)
 
 # 100
-data = ['09/05', '09/06', '09/07', '09/08', '09/09']
+data = ["09/05", "09/06", "09/07", "09/08", "09/09"]
 close_price = [10500, 10300, 10100, 10800, 11000]
 
 close_table = dict(zip(data, close_price))

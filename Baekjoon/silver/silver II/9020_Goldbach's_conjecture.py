@@ -6,7 +6,7 @@
 def prime_list(n):
     num = [True] * n
 
-    for i in range(2, int(n ** 0.5) + 1):  # 소수는 제곱근까지만 나눠보면 알 수 있음
+    for i in range(2, int(n**0.5) + 1):  # 소수는 제곱근까지만 나눠보면 알 수 있음
         if num[i] == True:
             for j in range(i + i, n, i):  # i 이후, i의 배수들은 모두 False
                 num[j] = False

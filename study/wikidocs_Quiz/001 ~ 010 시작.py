@@ -19,7 +19,7 @@ print('"C:\windows"')
 # print 문에서 ,는 뛰어쓰기 포함
 
 # 007 naver;kakao;sk;samsung 을 출력할 것
-print("naver", "kakao", "sk", "samsung", sep=";") 
+print("naver", "kakao", "sk", "samsung", sep=";")
 # sep을 이용하면 공백대신 다른 문자를 입력할 수 있음
 
 # 008 naver/kakao/sk/samsung 을 출력할 것
@@ -27,7 +27,8 @@ print("naver", "kakao", "sk", "samsung", sep="/")
 
 # 009 print("first");print("second") 를 줄바꿈 없이 출력하도록 수정
 # ;은 한줄에 여러 개의 명령을 작성하기 위해 사용함
-print("first", end="");print("second")
+print("first", end="")
+print("second")
 
 # 010 5/3의 결과를 화면에 출력
-print(5/3)
+print(5 / 3)

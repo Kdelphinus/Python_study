@@ -10,7 +10,7 @@
 
 # print(3 in cabinet) # 있으면 True, 없으면 False
 
-cabinet = {"A-3":"유재석", "B-100":"김태호"}
+cabinet = {"A-3": "유재석", "B-100": "김태호"}
 print(cabinet["A-3"])
 print(cabinet.get("B-100"))
 

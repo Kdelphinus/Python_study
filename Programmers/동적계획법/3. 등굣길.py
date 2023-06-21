@@ -1,7 +1,7 @@
 """나의 풀이 / 백준 23-3 문제 참고"""
 import sys
 
-sys.setrecursionlimit(10 ** 8)
+sys.setrecursionlimit(10**8)
 
 
 def solution(m, n, puddles):

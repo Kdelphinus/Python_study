@@ -10,5 +10,5 @@ num = int(input())
 str = input()
 ans = 0
 for i, s in enumerate(str):
-    ans += alphabet[s] * (r ** i)
+    ans += alphabet[s] * (r**i)
 print(ans % mod)

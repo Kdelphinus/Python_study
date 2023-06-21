@@ -274,7 +274,7 @@
 # print(" ")
 
 # # apart.reverse()
-# # for i in apart: 
+# # for i in apart:
 # for i in apart[::-1]:
 #     for j in i:
 #         print(j)
@@ -328,7 +328,7 @@
 #     sub = []
 #     for col in row:
 #         sub.append(col * 1.00014)
-#     result.append(sub)  
+#     result.append(sub)
 # print(result)
 
 # 195 ~ 198
@@ -351,11 +351,13 @@
 #         print(row[1] - row[2])
 
 # 200
-ohlc = [["open", "high", "low", "close"],
-        [100, 110, 70, 100],
-        [200, 210, 180, 190],
-        [300, 310, 300, 310]]
+ohlc = [
+    ["open", "high", "low", "close"],
+    [100, 110, 70, 100],
+    [200, 210, 180, 190],
+    [300, 310, 300, 310],
+]
 a = 0
 for i in ohlc[1:]:
-    a += i[3]-i[0]
+    a += i[3] - i[0]
 print(a)

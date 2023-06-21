@@ -22,7 +22,7 @@ test = (1,)
 # tuple은 값을 변경할 수 없기 때문에 변수 자체를 변경해야한다.
 
 # 077
-interest = ('삼성전자', 'LG전자', 'SK Hynix')
+interest = ("삼성전자", "LG전자", "SK Hynix")
 interest_list = list(interest)
 print(interest_list, type(interest_list))
 
@@ -31,11 +31,11 @@ interest_tuple = tuple(interest_list)
 print(interest_tuple, type(interest_tuple))
 
 # 079
-temp = ('apple', 'banana', 'cake')
-a,b,c = temp
-print(a,b)
-print(a,b,c)
+temp = ("apple", "banana", "cake")
+a, b, c = temp
+print(a, b)
+print(a, b, c)
 
 # 080
-even = tuple(range(2,100,2))
+even = tuple(range(2, 100, 2))
 print(even)

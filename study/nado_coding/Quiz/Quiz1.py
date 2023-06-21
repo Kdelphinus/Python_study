@@ -10,6 +10,6 @@ station_1 = "사당"
 station_2 = "신도림"
 station_3 = "인천공항"
 
-print(station_1+"행 열차가 들어오고 있습니다.")
-print(station_2+"행 열차가 들어오고 있습니다.")
-print(station_3+"행 열차가 들어오고 있습니다.")
+print(station_1 + "행 열차가 들어오고 있습니다.")
+print(station_2 + "행 열차가 들어오고 있습니다.")
+print(station_3 + "행 열차가 들어오고 있습니다.")

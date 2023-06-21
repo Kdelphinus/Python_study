@@ -11,7 +11,7 @@ def solution(n):
     power = 0  # 지수
     for i in range(len(num) - 1, -1, -1):  # 뒤에서부터 확인
         tmp = int(num[i])  # 숫자를 꺼내고
-        answer += tmp * (3 ** power)  # 3진법에서 10진법으로 변환
+        answer += tmp * (3**power)  # 3진법에서 10진법으로 변환
         power += 1
 
     return answer

@@ -2,6 +2,7 @@
 import pygame
 import os
 
+
 # 버블 클래스 생성
 class Bubble(pygame.sprite.Sprite):
     def __init__(self, image, color, position):

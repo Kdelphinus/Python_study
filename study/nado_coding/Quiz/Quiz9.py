@@ -4,14 +4,16 @@
 #     치킨 소진 시 사용자 정의 에러[SoldOutError]를 발생시키고 프로그램 종료
 #     출력 메시지 : "재고가 소진되어 더 이상 주문을 받지 않습니다."
 
+
 # [코드]
 class SoldOutError(Exception):
     pass
 
-chicken = 10
-watting = 1 # 홀 안에는 현재 만석, 대기번호 1부터 시작
 
-while(True):
+chicken = 10
+watting = 1  # 홀 안에는 현재 만석, 대기번호 1부터 시작
+
+while True:
     try:
         print("[남은 치킨 : {0}]".format(chicken))
         order = int(input("치킨 몇 마리 주문하시겠습니까?"))
@@ -62,4 +64,3 @@ while(True):
 
 # except SoldOutError:
 #     print("재고가 소진되어 더 이상 주문을 받지 않습니다.")
-

@@ -6,6 +6,7 @@
 import pygame
 import os, random, math
 
+
 # 버블 클래스 생성
 class Bubble(pygame.sprite.Sprite):
     def __init__(self, image, color, position=(0, 0), row_idx=-1, col_idx=-1):

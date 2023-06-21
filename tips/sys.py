@@ -16,4 +16,4 @@ sys.stdout.write(str(num))
 
 """재귀 제한 늘리기"""
 """파이썬은 재귀 깊이 제한이 1000으로 매우 얕기에 설정해줘야 할 때가 많다"""
-sys.setrecursionlimit(10 ** 8)  # 재귀 깊이 제한을 10 ** 8로 설정
+sys.setrecursionlimit(10**8)  # 재귀 깊이 제한을 10 ** 8로 설정

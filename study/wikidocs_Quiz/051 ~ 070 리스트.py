@@ -18,7 +18,7 @@ movie_rank.remove("럭키")
 del movie_rank[2:]
 # print(movie_rank)
 
-# 056 
+# 056
 # lang1 = ["C", "C++", "JAVA"]
 # lang2 = ["Python", "Go", "C#"]
 # langs = lang1 + lang2
@@ -60,8 +60,8 @@ del movie_rank[2:]
 
 # 064 reverse
 # num = [1,2,3,4,5]
-    # 방법 1
-    # print(num[::-1])
+# 방법 1
+# print(num[::-1])
 
 #     # 방법 2
 #     num.reverse()

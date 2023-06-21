@@ -1,7 +1,7 @@
 """연습문제"""
 import sys
 
-sys.setrecursionlimit(10 ** 8)
+sys.setrecursionlimit(10**8)
 MOD = 1000000007
 
 
