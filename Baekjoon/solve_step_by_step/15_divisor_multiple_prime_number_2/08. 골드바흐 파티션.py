@@ -1,3 +1,6 @@
+# 17103 골드바흐 파티션
+
+
 BOUNDARY = 1000000
 NUMBERS = [True] * (BOUNDARY + 1)
 
