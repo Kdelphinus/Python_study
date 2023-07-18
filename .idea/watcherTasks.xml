@@ -4,7 +4,6 @@
     <enabled-global>
       <option value="black[jupyter]" />
       <option value="black" />
-      <option value="mypy" />
     </enabled-global>
   </component>
 </project>
