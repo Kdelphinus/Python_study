@@ -1,6 +1,6 @@
 """11066 파일 합치기"""
-import sys
 import math
+import sys
 
 input = sys.stdin.readline
 

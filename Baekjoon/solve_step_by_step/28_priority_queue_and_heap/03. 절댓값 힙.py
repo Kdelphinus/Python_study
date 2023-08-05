@@ -1,6 +1,6 @@
 """11286 절댓값 힙"""
-import sys
 import heapq
+import sys
 
 input = sys.stdin.readline
 num = int(input())

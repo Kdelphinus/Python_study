@@ -1,7 +1,6 @@
 """9019 DSLR"""
 """시간 초과를 피하기 위해 pypy3로 제출"""
 import sys
-from collections import deque
 
 input = sys.stdin.readline
 

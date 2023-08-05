@@ -1,7 +1,6 @@
 """1655 가운데를 말해요"""
-import sys
 import heapq
-
+import sys
 
 input = sys.stdin.readline
 num = int(input())

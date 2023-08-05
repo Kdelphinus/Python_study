@@ -1,7 +1,7 @@
 """9370 미확인 도착지"""
 
-import sys
 import heapq as hp
+import sys
 
 input = sys.stdin.readline
 INF = float("inf")
