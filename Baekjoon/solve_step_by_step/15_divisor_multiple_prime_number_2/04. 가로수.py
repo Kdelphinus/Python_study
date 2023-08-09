@@ -1,4 +1,7 @@
 """2485 가로수"""
+import sys
+
+INPUT = sys.stdin.readline
 
 
 def gcd(a: int, b: int) -> int:
@@ -13,6 +16,6 @@ def planting_tree(n: int, street_tree: list) -> int:
 
 
 if __name__ == "__main__":
-    N = int(input())
-    STREET_TREE = sorted([int(input()) for _ in range(N)])
+    N = int(INPUT())
+    STREET_TREE = sorted([int(INPUT()) for _ in range(N)])
     print(planting_tree(N, STREET_TREE))
