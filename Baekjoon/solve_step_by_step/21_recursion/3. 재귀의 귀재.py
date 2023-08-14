@@ -20,7 +20,7 @@ def recursion(s, l, r):
         return recursion(s, l + 1, r - 1)
 
 
-def isPalindrome(s):
+def is_palindrome(s):
     """주어진 함수"""
     return recursion(s, 0, len(s) - 1)
 
@@ -28,5 +28,5 @@ def isPalindrome(s):
 if __name__ == "__main__":
     for _ in range(int(INPUT())):
         r_cnt = 0
-        p_cnt = isPalindrome(INPUT().rstrip())
+        p_cnt = is_palindrome(INPUT().rstrip())
         print(f"{p_cnt} {r_cnt}")
