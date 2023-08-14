@@ -1,3 +1,6 @@
+"""25501 재귀의 귀재"""
+
+
 import sys
 
 INPUT = sys.stdin.readline
