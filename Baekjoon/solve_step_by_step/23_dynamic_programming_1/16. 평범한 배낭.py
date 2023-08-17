@@ -8,7 +8,7 @@ for _ in range(num):
     weights.append(weight)
     values.append(value)
 
-dp = [0 for _ in range(limit + 1)]  #  최대 용량이 인덱스만큼 일 때 넣을 수 있는 최대 가치값이 저장된 리스트
+dp = [0 for _ in range(limit + 1)]  # 최대 용량이 인덱스만큼 일 때 넣을 수 있는 최대 가치값이 저장된 리스트
 
 for i in range(num):
     for j in range(limit, 0, -1):  # 무게 제한이 가장 큰 것부터 살펴본다
