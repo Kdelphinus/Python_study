@@ -4,6 +4,7 @@ from collections import deque
 
 INPUT = sys.stdin.readline
 
+
 def find_block(y, x):
     cnt, status, queue = 1, TOWN[y][x], deque([(y, x)])
     TOWN[y][x] = 0
@@ -31,5 +32,5 @@ if __name__ == "__main__":
                 status, cnt = TOWN[Y][X], find_block(Y, X)
                 if cnt >= K:
                     BLOCKS[status][0] += 1
-    BLOCKS.sort(key=lambda x:(-x[0], -x[1]))
+    BLOCKS.sort(key=lambda x: (-x[0], -x[1]))
     print(BLOCKS[0][1])

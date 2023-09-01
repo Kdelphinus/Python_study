@@ -1,12 +1,12 @@
 def board_game(position):
-    dire = {"U": (-1, 0), "D":(1, 0), "R": (0, 1), "L": (0, -1)}
+    dire = {"U": (-1, 0), "D": (1, 0), "R": (0, 1), "L": (0, -1)}
 
     flag, cnt = True, 1
     visit = [[0 for _ in range(N)] for __ in range(N)]
     visit[position[0]][position[1]] = 1
     while flag:
         tmp = list(BOARD[position[0]][position[1]])
-        num, order = ''.join(tmp[:-1]), str(tmp[-1])
+        num, order = "".join(tmp[:-1]), str(tmp[-1])
         for _ in range(int(num)):
             for i in range(2):
                 position[i] += dire[order][i]

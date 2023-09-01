@@ -1,6 +1,3 @@
-from collections import Counter
-
-
 N, K = map(int, input().split())
 number = list(map(int, input().split()))
 sort_lst = []

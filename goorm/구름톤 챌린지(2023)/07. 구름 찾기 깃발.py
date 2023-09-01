@@ -8,7 +8,7 @@ def flag(n, k, board):
                 continue
             tmp = 0
             for dx, dy in directions:
-                nx, ny  = x + dx, y + dy
+                nx, ny = x + dx, y + dy
                 if 0 <= nx < n and 0 <= ny < n and board[ny][nx]:
                     tmp += 1
             if tmp == k:
