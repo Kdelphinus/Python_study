@@ -29,22 +29,22 @@ input = sys.stdin.readline
 
 # version 2
 # c로 풀었던 방법, 이게 더 파이썬스럽다
-num = int(input())
-number = list(map(int, input().split()))
-stack = []
-anw = [0 for i in range(num)]
-
-for i in range(num - 1, -1, -1):
-    while stack and stack[-1] <= number[i]:
-        stack.pop()
-    if not stack:
-        anw[i] = -1
-    else:
-        anw[i] = stack[-1]
-
-    stack.append(number[i])
-
-print(*anw)
+# num = int(input())
+# number = list(map(int, input().split()))
+# stack = []
+# anw = [0 for i in range(num)]
+#
+# for i in range(num - 1, -1, -1):
+#     while stack and stack[-1] <= number[i]:
+#         stack.pop()
+#     if not stack:
+#         anw[i] = -1
+#     else:
+#         anw[i] = stack[-1]
+#
+#     stack.append(number[i])
+#
+# print(*anw)
 
 
 # --------------------------------------------------------------------------------------------------------
@@ -65,3 +65,18 @@ print(*anw)
 #             break
 #         else:
 #             j += 1
+
+# --------------------------------------------------------------------------------------------------------
+
+# 오등큰수를 푼 뒤 그 방법으로 바꾼 풀이
+num = int(input())
+number = list(map(int, input().split()))
+stack = []
+ans = [-1 for i in range(num)]
+
+for i in range(num):
+    while stack and number[stack[-1]] < number[i]:
+        ans[stack.pop()] = number[i]
+    stack.append(i)
+
+print(*ans)
