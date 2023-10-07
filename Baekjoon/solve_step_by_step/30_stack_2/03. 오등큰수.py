@@ -1,3 +1,4 @@
+"""17299 오등큰수"""
 # 풀이: https://velog.io/@wlrhkd49/%EB%B0%B1%EC%A4%80-17299-%EC%98%A4%EB%93%B1%ED%81%B0%EC%88%98-Python
 import sys
 from collections import Counter
