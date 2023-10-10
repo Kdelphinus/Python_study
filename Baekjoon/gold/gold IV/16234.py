@@ -1,33 +1,59 @@
 import sys
+from collections import deque
 
 INPUT = sys.stdin.readline
 DIRECTIONS = ((0, 1), (0, -1), (1, 0), (-1, 0))
 
 
-def check_border_line(n: int, nations: list, left: int, right: int) -> (bool, list):
-    flag, border_line = False, [[0 for _ in range(n)]]
-    for y in range(n):
-        for x in range(n):
-            if y + 1 < n and left <= abs(nations[y + 1][x] - nations[y][x]) <= right:
-                flag = True
-                border_line[y][x] = 1
-                border_line[y + 1][x] = 1
-            if x + 1 < n and left <= abs(nations[y][x + 1] - nations[y][x]) <= right:
-                flag = True
-                border_line[y][x] = 1
-                border_line[y][x + 1] = 1
-    return flag, border_line
+def bfs(n: int, start: tuple, nations: list, key: int, left: int, right: int) -> int:
+    cnt, total, queue = (
+        1,
+        nations[start[1]][start[0]],
+        deque([(start[0], start[1], nations[start[1]][start[0]])]),
+    )
+    origin = nations[start[1]][start[0]]
+    nations[start[1]][start[0]] = key
 
+    while queue:
+        x, y, v = queue.popleft()
 
-def bfs() -> None:
-    pass
+        for dx, dy in DIRECTIONS:
+            nx, ny = x + dx, y + dy
+            if (
+                0 <= nx < n
+                and 0 <= ny < n
+                and nations[ny][nx] >= 0
+                and left <= abs(v - nations[ny][nx]) <= right
+            ):
+                queue.append((nx, ny, nations[ny][nx]))
+                total += nations[ny][nx]
+                nations[ny][nx] = key
+                cnt += 1
+    if cnt == 1:
+        nations[start[1]][start[0]] = origin
+    return -1 if cnt == 1 else total // cnt
 
 
 def immigration(n: int, nations: list, left: int, right: int) -> int:
     cnt = 0
-    flag, boarder_line = check_border_line(n, nations, left, right)
-    if not flag:
-        return cnt
+
+    while True:
+        key, population = -1, dict()
+        for y, row in enumerate(nations):
+            for x, i in enumerate(row):
+                if i >= 0:
+                    value = bfs(n, (x, y), nations, key, left, right)
+                    if value == -1:
+                        continue
+                    population[key] = value
+                    key -= 1
+        if key == -1:
+            return cnt
+        for y, row in enumerate(nations):
+            for x, i in enumerate(row):
+                if i < 0:
+                    nations[y][x] = population[i]
+        cnt += 1
 
 
 if __name__ == "__main__":
