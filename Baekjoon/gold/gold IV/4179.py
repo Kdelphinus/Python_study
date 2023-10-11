@@ -25,7 +25,7 @@ def bfs() -> str | int:
 
             if 0 <= nx < C and 0 <= ny < R:
                 if MAZE[ny][nx] != "#" and not VISIT_J[ny][nx]:
-                    if not VISIT_F[ny][nx] or VISIT_F[ny][nx] > VISIT_J[ny][nx] + 1:
+                    if not VISIT_F[ny][nx] or VISIT_F[ny][nx] > VISIT_J[y][x] + 1:
                         VISIT_J[ny][nx] = VISIT_J[y][x] + 1
                         QUEUE_JIHOON.append((nx, ny))
             else:
