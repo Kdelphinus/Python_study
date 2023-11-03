@@ -10,13 +10,19 @@
       2. [선택 정렬](#312-선택-정렬selection-sort)
       3. [삽입 정렬](#313-삽입-정렬insertion-sort)
    2. [$O(n \log n)$](#32-on-log-n)
-      1. [병합 정렬](#321-병합-정렬-merge-sort)
-      2. [힙 정렬](#322-힙-정렬-heap-sort)
-      3. [퀵 정렬](#323-퀵-정렬-quick-sort)
-      4. [트리 정렬](#324-트리-정렬-tree-sort)
+       1. [병합 정렬](#321-병합-정렬merge-sort)
+       2. [힙 정렬](#322-힙-정렬heap-sort)
+       3. [퀵 정렬](#323-퀵-정렬quick-sort)
+       4. [트리 정렬](#324-트리-정렬tree-sort)
 4. [그 외의 정렬들](#4-그-외의-정렬들)
 5. [Python의 경우](#5-python의-경우)
 6. [Tim sort](#6-tim-sort)
+    1. [새로운 정렬의 필요성](#새로운-정렬의-필요성)
+    2. [참조 지역성 원리 관점에서](#참조-지역성-원리-관점에서)
+    3. [Tim sort](#tim-sort)
+    4. [Tim sort의 기본 원리](#tim-sort의-기본-원리)
+    5. [Tim sort의 최적화 기법](#tim-sort의-최적화-기법)
+
 
 # 1. 개요
 
@@ -55,10 +61,10 @@
 def bubble_sort(lst: list, len: int):
     for i in range(len - 1, 0, -1):
         for j in range(i):
-        	if a[j] > a[j + 1]:
-        		tmp = a[j]
-        		a[j] = a[j + 1]
-        		a[j + 1] = tmp
+            if lst[j] > lst[j + 1]:
+                tmp = lst[j]
+                lst[j] = lst[j + 1]
+                lst[j + 1] = tmp
 ```
 
 ### 3.1.2 선택 정렬(Selection sort)
