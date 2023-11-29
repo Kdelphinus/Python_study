@@ -2,7 +2,6 @@ from collections import deque
 
 
 def kevin_bacon(me: int, n: int, linked: list):
-    total = 0
     queue = deque()
     queue.append((me, 0))
     visited = [0] * n
@@ -10,12 +9,11 @@ def kevin_bacon(me: int, n: int, linked: list):
 
     while queue:
         user, dist = queue.popleft()
-        if not visited[user]:
-            visited[user] = dist
 
         for i in range(n):
             if not visited[i] and i in linked[user]:
                 queue.append((i, dist + 1))
+                visited[i] = dist + 1
 
     return sum(visited) - 1
 
